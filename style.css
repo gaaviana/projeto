@@ -346,28 +346,30 @@ a {
         }
 
         .item-carrossel {
+            padding-bottom: 2rem;
+
             img {
                 width: auto;
                 height: 50vh;
             }
+
+
         }
     }
 
     .insta {
-        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-        height: 8vh;
-        padding-left: 10px;
-        display: flex;
-        align-items: center;
-
-        p {
-            display: flex;
-            align-items: center;
+   
+        a {
+        display: inline-flex;
+        text-decoration: none;
+        color: #fff; 
+        padding: 10px 15px;
+        transition: background-color 0.3s, transform 0.3s;
         }
-
-        img {
-            width: 30px;
-            padding-right: 5px;
+        
+        a:hover {
+            text-transform: uppercase;
+            transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
         }
     }
 }
@@ -382,15 +384,17 @@ a {
 
 
 .sobre {
-    background-color: black;
-    padding-top: 2rem;
+    margin: auto;
+    background-color: white;
+    border: solid 1px var(--cor-destaque);
+    border-radius: 10px;
     max-width: 800px;
     line-height: 1.6;
 }
 
 .sobre h2 {
     font-size: 28px; /* Tamanho reduzido */
-    color: var(--cor-principal);
+    color: var(--cor-secundaria);
     padding: 1.5rem;
     text-align: center;
     text-transform: uppercase;
@@ -399,29 +403,51 @@ a {
 }
 
 .sobre p {
+    padding: 10px;
     font-size: 16px; /* Tamanho aumentado */
-    color: var(--cor-principal);
+    color: var(--cor-secundaria);
     text-align: justify;
-    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
     line-height: 1.5; /* Aumento do espaçamento de linha */
 }
 
 .sobre strong {
-    color: var(--cor-destaque);
+    color: var(--cor-secundaria);
     font-weight: bold;
 }
 
 .sobre em {
-    color: var(--cor-destaque);
+    color: var(--cor-secundaria);
     font-style: italic;
 }
 
 .sobre a {
-    color: var(--cor-destaque);
+    color: var(--cor-secundaria);
     text-decoration: none;
     font-weight: bold;
 }
 
 .sobre a:hover {
     text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+.localizacao {
+    h2 {
+        color: var(--cor-principal);
+        text-align: center;
+        padding-bottom: 2rem;
+        padding-top: 1rem;
+    }
+
+    iframe{
+        width: 100%;
+    }
 }
