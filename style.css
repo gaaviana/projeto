@@ -29,7 +29,7 @@ html {
 
 body {
     font-family: "Raleway", sans-serif;
-    background-color: #000;
+    background-color: var(--cor-secundaria);
 }
 
 
@@ -42,59 +42,73 @@ body {
 
 
 header {
+    /* tamamho do cabeçalho pegando 10 da VH */
     height: 10vh;
-    background-color: var(--cor-principal);
+    /*  cor de fundo preta */
+    background-color: var(--cor-secundaria);
+    /*  index para ficar na frente de todo conteudo */
     z-index: 1;
-    position: sticky;
+    /*  position sticky para fixar o cabeçalho no topo (top:0;)*/
     top: 0;
+    position: sticky;
+    /* display flex */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* ! padding distanciar das bordas */
     padding: 10px;
 }
 
 .logo {
-    position: absolute; /* Permite centralizar a logo em relação ao cabeçalho */
-    left: 50%; /* Move a logo para o meio do cabeçalho */
-    transform: translateX(-50%); /* Centraliza a logo */
+    /*
+    position absolute e cordenadas para centralizar a logo
+    */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 
     img {
+        /* tamanho do logo */
         width: 50px;
     }
 }
 
 nav {
+    /* colocar o menu hamburguer na direita */
     margin-left: auto;
-}
 
-/* a {
-    text-decoration: none;
-    width: 60px;
-} */
+    .links-menu {
+        /* para o menu ficar oculto enquanto não for acionado */
+        display: none;
+        /* tirar a decoraçaão da lista */
+        list-style: none;
+        /* zerar a margin */
+        margin: 0;
 
-.links-menu {
-    display: none;
-    list-style: none;
-    margin: 0;
-
-    a {
-        color: var(--cor-secundaria);
-        font-weight: bold;
-        height: 50px;
-        letter-spacing: 2px; /* Ajuste do espaçamento entre letras */
-        margin-left: 24px;
+        a {
+            /* cor preta */
+            color: var(--cor-secundaria);
+            /* aumentar o peso da font  */
+            font-weight: bold;
+            /* Ajuste do espaçamento entre letras */
+            letter-spacing: 2px;
+        }
     }
 }
 
 .menu div {
+    /* para ele só ficar visivel para telas menores de 700px */
     display: none;
+    /* largura e altura de cada div/linha do menu */
     width: 32px;
     height: 2px;
-    background: var(--cor-secundaria);
+    /* cor branca */
+    background: var(--cor-principal);
+    /* margin entre as linhas do menu */
     margin: 8px;
+    /* suavizar a animação do menu */
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* classes para animar o menu hamburguer para quando ele estiver aberto ele virar um X  */
 .fechar .linha1 {
     transform: rotate(-45deg) translate(-8px, 8px);
 }
@@ -107,31 +121,46 @@ nav {
     transform: rotate(45deg) translate(-5px, -7px);
 }
 
+/* midia para telas até 700px */
 @media (max-width: 700px) {
     .menu div {
+        /* para o menu ficar visivel para esse tipo de tela */
         display: flex;
     }
 
     .links-menu {
+        /* para ter a posição fixa abaixo do cabeçalho, por isso o top 10vh */
         position: absolute;
         top: 10vh;
+        /* ...  */
         right: 0;
-        width: 50vw;
+        /* quando aberto vai ocupar 100% da Vh */
+        width: 100vw;
+        /* cor branca */
         background-color: var(--cor-principal);
+        /* altura pegando o resto da tela, 90vh */
         height: 90vh;
+        /* zerar o padding */
         padding: 0;
+        /* flex com direção em colunas */
         flex-direction: column;
+        /* alinhar itens no centro */
         align-items: center;
+        /* espaçamento */
         justify-content: space-around;
 
+
         a {
+            /* tirar a decoração do link */
             text-decoration: none;
+            /* cor preta */
             color: var(--cor-secundaria);
         }
     }
 }
 
-@media (min-width: 701px ) and (max-width:1024px) {
+/* ! mudança temporaria para remover alguns itens em telas maiores de 700px */
+@media (min-width: 701px) and (max-width:1024px) {
     .links-menu {
         display: flex;
     }
@@ -150,49 +179,69 @@ nav {
 
 
 
+
 .calendario {
+    /* display flez */
     display: flex;
+    /* faz com que o conteudo que esta para fora da tela fique escondido e vire uma barra de scroll */
     overflow-x: scroll;
+    /* 100% da largura */
     width: 100%;
-    height: 18vh;
-    scroll-snap-type: x mandatory; 
-    position: relative;
+    /* altura 20 vh */
+    height: 20vh;
+    /* para uma rolagem suave e controlada */
+    scroll-snap-type: x mandatory;
+
 
     &::-webkit-scrollbar {
+        /* para ocultar a barra de scroll */
         display: none;
     }
 
     .jogos {
+        /* para ocupar 100$ do tamanho e os outros conteudos ir para o lado */
         flex: 0 0 100%;
+        /* para alinhar durante a rolagem */
         scroll-snap-align: start;
+        /* cor branca */
         background-color: var(--cor-principal);
+        /* centralizar texto */
         text-align: center;
+        /* display flex e alinhamento do restante dos itens */
         display: flex;
         flex-direction: column;
         justify-content: center;
 
         img {
+            /* tamamho das logos dos times */
             width: 25px;
             padding: 3px;
         }
 
         h2 {
-            line-height: 1.4; /* Ajuste do espaçamento de linha */
-            font-size: 16px; /* Aumento do tamanho da fonte */
+            /* Ajuste do espaçamento de linha */
+            font-size: 16px;
+            /* Aumento do tamanho da fonte */
+            line-height: 1.4;
         }
 
         p {
-            font-size: 14px; /* Aumento do tamanho da fonte */
-            line-height: 1.4; /* Ajuste do espaçamento de linha */
+            /* Aumento do tamanho da fonte */
+            font-size: 14px;
+            /* Ajuste do espaçamento de linha */
+            line-height: 1.4;
         }
     }
 
     .proximo-jogo {
+        /* espaçamento do logo pro nome do time */
         padding: 5px 0;
+        /* centralizar*/
         display: flex;
         justify-content: center;
 
         p {
+            /* centralizar os nomes horizontalmente */
             display: flex;
             align-items: center;
         }
@@ -212,24 +261,35 @@ nav {
     position: relative;
 
     img {
+        /* tamanho de 80vh e largura de 100% */
+        height: 80vh;
         width: 100%;
-        height: 70vh;
+        /* para que a imagem se ajuste ao tamanho necessario */
         object-fit: cover;
+        /* filtro de brilho  */
         filter: brightness(0.5);
     }
 
     figcaption {
+        /* centralizar texto */
         text-align: center;
+        /* deixar o texto solto porem dentro dos limites da imagem */
         position: absolute;
+        /* coordenadas para centralizar o figcaption */
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        /* espaçamento entre linhas */
         line-height: 1.6;
+        /* cor branca */
         color: var(--cor-principal);
 
         strong {
+            /* transformar o tirulo em maiusculo */
             text-transform: uppercase;
+            /* tamanho da fonte */
             font-size: 5rem;
+            /* cor branca */
             color: var(--cor-principal);
         }
     }
@@ -244,146 +304,173 @@ nav {
 
 
 
-.galeria-container {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding-top: 2rem;
-    max-width: 1200px;
-
-    h2 {
-        color: var(--cor-principal);
-        font-size: 24px; /* Tamanho aumentado */
-        line-height: 1.5; /* Aumento do espaçamento de linha */
-    }
-
-    .foto {
-        width: 340px;
-        overflow: hidden;
-        position: relative;  
-    }
-
-    .foto img {
-        border-radius: 20px;
-        border: solid 2px var(--cor-destaque);
-        width: 100%;
-        height: auto;
-        display: block;
-        transition: transform 0.3s ease;
-    }
-
-    .foto figcaption {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.7); 
-        color: var(--cor-principal);
-        padding: 10px;
-        text-align: center;
-        transform: translateY(100%); 
-        transition: transform 0.3s ease;
-        display: block;
-    }
-
-    .foto img:hover {
-        transform: scale(1.1);
-    }
-
-    .foto:hover figcaption {
-        transform: translateY(0); 
-    }
-}
-
-
-
-
-
-
-
-
-
-
-.video-container {
-    padding-top: 2rem;
-    max-width: 1200px;
-
-    .titulo {
-        color: var(--cor-principal);
-        text-align: center;
-        padding-bottom: 2rem;
-        font-size: 24px; /* Tamanho aumentado */
-        line-height: 1.5; /* Aumento do espaçamento de linha */
-    }
-
-    .video iframe {
-        width: 100%;
-    }
-}
-
-
-
-
-
-
-
-
-
-
 .container-carrossel {
+    /* ! padding para espaçamento */
     padding-top: 2rem;
+    /* ! largura maxima de 1200px */
     max-width: 1200px;
 
     h2 {
+        /* cor branca */
         color: var(--cor-principal);
+        /* ! padding de espaçamento */
         padding-bottom: 2rem;
+        /* centralizar texto */
         text-align: center;
-        font-size: 24px; /* Tamanho aumentado */
-        line-height: 1.5; /* Aumento do espaçamento de linha */
+        /* Tamanho aumentado */
+        font-size: 24px;
+        /* Aumento do espaçamento de linha */
+        line-height: 1.5;
     }
 
     .carrossel {
+        /* displey flex */
         display: flex;
+        /* faz com que o conteudo que esta para ora da tela fique escondido e vire uma barra de scroll */
         overflow-x: scroll;
+        /* largura de 100% */
         width: 100%;
+        /* para uma rolagem suave e controlada */
         scroll-snap-type: x mandatory;
+        /* espaçamento de 10px entre as imagens */
         gap: 10px;
-        position: relative;
 
         &::-webkit-scrollbar {
+            /* para ocultar a barra de scroll */
             display: none;
         }
 
         .item-carrossel {
-            padding-bottom: 2rem;
 
             img {
+                /* altura e largura das imagens */
                 width: auto;
                 height: 50vh;
             }
-
-
         }
     }
 
     .insta {
-   
+
         a {
-        display: inline-flex;
-        text-decoration: none;
-        color: #fff; 
-        padding: 10px 15px;
-        transition: background-color 0.3s, transform 0.3s;
+            /* tirar a decoração do link */
+            text-decoration: none;
+            /* cor branca */
+            color: #fff;
+            /* ! padding para espaçamento */
+            padding: 10px 15px;
+            /* transição para animação do hover */
+            transition: background-color 0.3s, transform 0.3s;
         }
-        
+
         a:hover {
+            /* ! animação para quando passar o mouse no link */
             text-transform: uppercase;
-            transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+            transform: scale(1.05);/
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+.galeria-container {
+    display: flex;
+    /* para a imagens ir para baixo quando nao tiver mais espaço para ficar lado a lado */
+    flex-wrap: wrap;
+    /* para centralizar as imagens  */
+    justify-content: center;
+    /* espaçamento de 30px */
+    gap: 30px;
+    /* ! padding para espaçamento */
+    padding-top: 2rem;
+    /* ! tamanho maximo de 1200px */
+    max-width: 1200px;
+    /* ! padding para espaçamento */
+    padding-bottom: 2rem;
+
+    h2 {
+        /* cor branca */
+        color: var(--cor-principal);
+        /* Tamanho aumentado */
+        font-size: 24px;
+        /* Aumento do espaçamento de linha */
+        line-height: 1.5;
+    }
+
+    .foto {
+        /* ! tamamho da foto */
+        width: 340px;
+        /* para ocultar o conteudo que esteja fora da foto (no caso o figcaption)  */
+        overflow: hidden;
+        /* posição relativa a figcaption */
+        position: relative;
+    }
+
+    .foto img {
+        /* borda na imgaem */
+        border-radius: 20px;
+        border: solid 2px;
+        /* largura 100% da imagem */
+        width: 100%;
+        /* altura automatica */
+        height: auto;
+        /* transição para o hover */
+        transition: transform 0.3s ease;
+    }
+
+    .foto figcaption {
+        /* posição absoluta nos limites da foto */
+        position: absolute;
+        /* coordenadas para posição */
+        bottom: 0;
+        left: 0;
+        /* largura de 100% */
+        width: 100%;
+        /* cor de fundo */
+        background: rgba(255, 255, 255, 0.7);
+        /* cor branca */
+        color: var(--cor-principal);
+        /* ! padding para espaçamento */
+        padding: 10px;
+        /* centralizar texto */
+        text-align: center;
+        /* transform para tirar o fig de dentro da foto */
+        transform: translateY(100%);
+        /* transição para o hiver */
+        transition: transform 0.3s ease;
+    }
+
+    .foto img:hover {
+        /* aumentar o tamanho da imagem */
+        transform: scale(1.1);
+    }
+
+    .foto:hover figcaption {
+        /* fazer o fig aparecer qundo passar o mouse */
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -395,43 +482,50 @@ nav {
 
 
 .sobre {
+    /* marein automatica*/
     margin: auto;
+    /* cor branca */
     background-color: white;
+    /* borda levemente arredondada */
     border: solid 1px var(--cor-destaque);
     border-radius: 10px;
+    /*  ! largura maxima de 800px */
     max-width: 800px;
+    /* espaçamento entre linhas */
     line-height: 1.6;
 }
 
 .sobre h2 {
-    font-size: 28px; /* Tamanho reduzido */
+    /* Tamanho fo titulo*/
+    font-size: 28px;
+    /* cor preta */
     color: var(--cor-secundaria);
+    /* ! padding para espaçamento */
     padding: 1.5rem;
+    /* centralizar titulo */
     text-align: center;
+    /* transformar em maiusculo */
     text-transform: uppercase;
+    /* espaçamento entre as letras */
     letter-spacing: 1.5px;
+    /* peso da font */
     font-weight: bold;
 }
 
 .sobre p {
+    /* ! padding para espaçamento */
     padding: 10px;
-    font-size: 16px; /* Tamanho aumentado */
+    /* tamamho do tetxo */
+    font-size: 16px;
+    /* cor preta */
     color: var(--cor-secundaria);
-    text-align: justify;
+    /* ! padding para espaçamento */
     padding-bottom: 1rem;
-    line-height: 1.5; /* Aumento do espaçamento de linha */
+    /* espaçamento de linhas */
+    line-height: 1.5;
 }
 
-.sobre strong {
-    color: var(--cor-secundaria);
-    font-weight: bold;
-}
-
-.sobre em {
-    color: var(--cor-secundaria);
-    font-style: italic;
-}
-
+/* !!! link personalizado para pag historia */
 .sobre a {
     color: var(--cor-secundaria);
     text-decoration: none;
@@ -451,15 +545,79 @@ nav {
 
 
 .localizacao {
-    h2 {
-        color: var(--cor-principal);
-        text-align: center;
-        padding-bottom: 2rem;
+    iframe {
+        /* ! padding para espaçamento */
         padding-top: 1rem;
-    }
-
-    iframe{
+        /* altura e tamanho do maps */
         height: 200px;
         width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+footer {
+    /* cor preta*/
+    background-color: var(--cor-secundaria);
+    /* cor branca */
+    color: var(--cor-principal);
+
+}
+
+.footer-container {
+    /* ! largura maxima */
+    max-width: 1200px;
+    /* ! padding para espaçamento */
+    padding: 20px;
+
+    h4 {
+        /* centralizar titulo */
+        text-align: center;
+    }
+}
+
+.patrocinio {
+    /* displey flex */
+    display: flex;
+    /* espaçamento entre as imagens */
+    gap: 30px;
+    /* centralizar na horizontal */
+    justify-content: center;
+    /* ! padding para espaçamento */
+    padding-bottom: 2rem;
+}
+
+.patrocinio img {
+    /* altura e largura das imagens */
+    width: 75px;
+    height: 75px;
+
+}
+
+.infos {
+    /* ! padding para espaçamento */
+    padding-bottom: 1rem;
+
+    ul {
+        /* zerar o padding e tirar o estilo da lista */
+        list-style: none;
+        padding: 0;
+    }
+
+    ul li {
+        /* margem entre as lihhas */
+        margin-bottom: 10px;
+    }
+
+    a {
+        /* link branco e sem decoração */
+        color: #fff;
+        text-decoration: none;
     }
 }
