@@ -42,6 +42,7 @@ body {
 
 
 header {
+    margin: auto; /* ? mudançs novas*/
     /* tamamho do cabeçalho pegando 10 da VH */
     height: 10vh;
     /*  cor de fundo preta */
@@ -53,6 +54,10 @@ header {
     position: sticky;
     /* display flex */
     display: flex;
+
+    justify-content: center; /*? mudançs novas*/
+    align-items: center; /*? mudançs novas*/
+
     /* ! padding distanciar das bordas */
     padding: 10px;
 }
@@ -61,9 +66,7 @@ header {
     /*
     position absolute e cordenadas para centralizar a logo
     */
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 50px; /*? mudançs novas*/
 
     img {
         /* tamanho do logo */
@@ -74,6 +77,7 @@ header {
 nav {
     /* colocar o menu hamburguer na direita */
     margin-left: auto;
+}
 
     .links-menu {
         /* para o menu ficar oculto enquanto não for acionado */
@@ -84,6 +88,7 @@ nav {
         margin: 0;
 
         a {
+
             /* cor preta */
             color: var(--cor-secundaria);
             /* aumentar o peso da font  */
@@ -92,7 +97,7 @@ nav {
             letter-spacing: 2px;
         }
     }
-}
+
 
 .menu div {
     /* para ele só ficar visivel para telas menores de 700px */
@@ -161,15 +166,32 @@ nav {
 
 /* ! mudança temporaria para remover alguns itens em telas maiores de 700px */
 @media (min-width: 701px) and (max-width:1024px) {
+    nav {
+       margin: auto; /*? mudançs novas*/
+    }
+
     .links-menu {
         display: flex;
+        width: 100%; /*? mudançs novas*/
+        justify-content: space-between; /*? mudançs novas*/
+        align-items: center; /*? mudançs novas*/
+        gap: 20px; /*? mudançs novas*/
+
+        margin: 0; /* Zera margens */
+        padding: 0; /* Zera padding */ 
+
+        a {
+            text-decoration: none; /*? mudançs novas*/
+            color: white; /*? mudançs novas*/
+            margin: 0; /*? mudançs novas*/
+        }
     }
 }
+
 
 .links-menu.aberto {
     display: flex;
 }
-
 
 
 
@@ -305,10 +327,12 @@ nav {
 
 
 .container-carrossel {
+    margin: auto;
     /* ! padding para espaçamento */
     padding-top: 2rem;
     /* ! largura maxima de 1200px */
-    max-width: 1200px;
+    max-width: 1600px;
+   
 
     h2 {
         /* cor branca */
@@ -378,9 +402,22 @@ nav {
 
 
 
+.galeria {
 
+    h2 {
+        text-align: center;
+        /* cor branca */
+        color: var(--cor-principal);
+        /* Tamanho aumentado */
+        font-size: 24px;
+        /* Aumento do espaçamento de linha */
+        line-height: 1.5;
+    }
 
 .galeria-container {
+    /* centralizar as imagens */
+    margin: auto;
+
     display: flex;
     /* para a imagens ir para baixo quando nao tiver mais espaço para ficar lado a lado */
     flex-wrap: wrap;
@@ -391,18 +428,9 @@ nav {
     /* ! padding para espaçamento */
     padding-top: 2rem;
     /* ! tamanho maximo de 1200px */
-    max-width: 1200px;
+    max-width: 1000px;
     /* ! padding para espaçamento */
     padding-bottom: 2rem;
-
-    h2 {
-        /* cor branca */
-        color: var(--cor-principal);
-        /* Tamanho aumentado */
-        font-size: 24px;
-        /* Aumento do espaçamento de linha */
-        line-height: 1.5;
-    }
 
     .foto {
         /* ! tamamho da foto */
@@ -415,8 +443,8 @@ nav {
 
     .foto img {
         /* borda na imgaem */
-        border-radius: 20px;
-        border: solid 2px;
+        /* border-radius: 20px;
+        border: solid 2px; */
         /* largura 100% da imagem */
         width: 100%;
         /* altura automatica */
@@ -457,6 +485,9 @@ nav {
         transform: translateY(0);
     }
 }
+}
+
+
 
 
 
@@ -490,7 +521,7 @@ nav {
     border: solid 1px var(--cor-destaque);
     border-radius: 10px;
     /*  ! largura maxima de 800px */
-    max-width: 800px;
+    max-width: 1000px;
     /* espaçamento entre linhas */
     line-height: 1.6;
 }
@@ -572,7 +603,7 @@ footer {
 
 .footer-container {
     /* ! largura maxima */
-    max-width: 1200px;
+    width: 100%;
     /* ! padding para espaçamento */
     padding: 20px;
 
