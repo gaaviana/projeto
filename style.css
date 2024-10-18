@@ -4,7 +4,18 @@
     box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 2rem 0; /* Espaçamento superior e inferior de 2 rem */
+}
+
+h1 {font-size: 2rem;}
+h2 {font-size: 1.75rem;}
+h3 {font-size: 1.5rem;}
+
+p {font-size: 1rem;}
+
 body {
+    font-family: "Raleway", sans-serif;
     background-color: black;
     padding: 0;
     margin: 0;
@@ -23,7 +34,7 @@ header {
     top: 0;
 
 
-    background-color: black;
+    background-color: white;
 
     .logo {
 
@@ -45,7 +56,7 @@ header {
     display: none;
     width: 32px;
     height: 2px;
-    background-color: white;
+    background-color: black;
     margin: 8px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -67,123 +78,41 @@ header {
     display: none;
 }
 
-@media (max-width: 700px) {
-    .menu {
-        justify-content: center;
-        gap: 25%;
-
-        position: absolute;
-        top: 10vh;
-        right: 0;
-
-        width: 100vw;
-        height: 90vh;
-
-        background-color: white;
-
-        ul {
-            list-style: none;
-        }
-
-        a {
-            font-weight: bold;
-            color: black;
-            font-size: 1.3rem;
-            text-decoration: none;
-        }
-
-        .coluna-esquerda,
-        .coluna-direita {
-            li {
-                margin: 10px;
-            }
-        }
-    }
-
-    .menu-hamburguer div {
-        display: flex;
-    }
-}
 
 .menu.aberto {
     display: flex;
 }
 
-@media (min-width: 701px) and (max-width:1024px) {
-    nav {
-        margin: auto;
-        width: 100% ;
-    }
 
-    .menu {
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        max-width: 800px;
-        padding-left: 10px ;
-        padding-right: 10px;
-    }   
-
-    .coluna-direita {
-        margin-left: auto;
-    }
-
-    .coluna-esquerda {
-        margin-right: auto;
-    }
-
-    .links-menu {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        gap: 50px;
-
-        a {
-            text-decoration: none;
-            color: white;
-        }
-    }
-}
 
 /*      CALENDARIO       */
 
 .calendario {
-    display: flex;
-    overflow-x: scroll;
     width: 100%;
-    height: 20vh;
-    scroll-snap-type: x mandatory;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
+    h2 {margin: 0;}
 
     .jogos {
-        flex: 0 0 100%;
-        scroll-snap-align: start;
-        background-color: white;
-        text-align: center;
-        
         img {
-            width: 35px;
+            width: 30px;
             padding-left: 5px;
             padding-right: 5px;
         }
-
+        
         h2 {
-            font-size: 16px;  
             margin: 5px;
         }
-
+        
         p {
-            margin: 5px;
-            font-size: 14px;
-           
+            margin: 8px;
         }
     }
-
+    
     .proximo-jogo {
         display: flex;
         justify-content: center;
@@ -197,14 +126,14 @@ header {
 .destaque {
     position: relative;
     margin: 0;
-
+    
     img {
         height: 80vh;
         width: 100%;
         object-fit: cover;
         filter: brightness(0.5);
     }
-
+    
     figcaption {
         text-align: center;
         position: absolute;
@@ -213,10 +142,12 @@ header {
         transform: translate(-50%, -50%);
         line-height: 1.6;
         color: white;
-
+        font-size: calc(1rem + 1vw);
+        
         strong {
-            text-transform: uppercase;
-            font-size: 5rem;
+            letter-spacing: 5px;
+            font-family: "Anton", sans-serif;
+            font-size: calc(7rem + 3vw);
         }
     }
 }
@@ -226,53 +157,61 @@ header {
 .container-carrossel {
     margin: auto;
     max-width: 1600px;
-
+    
     h2 {
         color: white;
         text-align: center;
     }
-
+    
     .carrossel {
         display: flex;
         overflow-x: scroll;
         width: 100%;
         scroll-snap-type: x mandatory;
+        align-items: center;
         
-
+        
         &::-webkit-scrollbar {
             display: none;
         }
-
+        
         .item-carrossel {
             margin: 0;
             transform: scale(0.9);
             transition: transform 0.5s ease;
-
+            
             img {
                 width: auto;
                 height: 50vh;
             }
         }
-
+        
         .item-carrossel:hover {
             transform: scale(1);
         }
-
+        
         figcaption {
             background-color: gray;
             filter: brightness(0.8); 
             text-align: center;
             color: white;
         }
-
+        
         figcaption.off {
             background-color: red;
             filter: brightness(0.8); 
         }
     }
-
+    
+    p {
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+    
     .insta {
-
+        
         a {
             text-decoration: none;
             color: #fff;
@@ -284,56 +223,55 @@ header {
 /*      Galeria      */
 
 .galeria {
-
+    
     h2 {
         text-align: center;
         color: white;
-        font-size: 24px;
     }
-
-.galeria-container {
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1000px;
-
-    .foto {
-        margin: 0;
-        width: 340px;
-        overflow: hidden;
-        position: relative;
+    
+    .galeria-container {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-width: 1000px;
+        
+        .foto {
+            margin: 0;
+            width: 340px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .foto img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        
+        .foto figcaption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: lightgray;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .foto img:hover {
+            transform: scale(1.1);
+        }
+        
+        .foto:hover figcaption {
+            transform: translateY(0);
+        }
     }
-
-    .foto img {
-        width: 100%;
-        height: auto;
-        transition: transform 0.3s ease;
-    }
-
-
-    .foto figcaption {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: lightgray;
-        color: white;
-        padding: 10px;
-        text-align: center;
-        transform: translateY(100%);
-        transition: transform 0.3s ease;
-    }
-
-    .foto img:hover {
-        transform: scale(1.1);
-    }
-
-    .foto:hover figcaption {
-        transform: translateY(0);
-    }
-}
 }
 
 /*      SOBRE        */
@@ -346,7 +284,6 @@ header {
 }
 
 .sobre h2 {
-    font-size: 28px;
     text-align: center;
     letter-spacing: 1.5px;
     font-weight: bold;
@@ -354,7 +291,6 @@ header {
 
 .sobre p {
     padding: 10px;
-    font-size: 16px;
     line-height: 1.5;
 }
 
@@ -386,7 +322,7 @@ footer {
 .footer-container {
     width: 100%;
     padding: 20px;
-
+    
     h4 {
         text-align: center;
     }
@@ -401,20 +337,20 @@ footer {
 .patrocinio img {
     width: 75px;
     height: 75px;
-
+    
 }
 
 .infos {
-
+    
     ul {
         list-style: none;
         padding: 0;
     }
-
+    
     ul li {
         margin-bottom: 10px;
     }
-
+    
     a {
         color: #fff;
         text-decoration: none;
@@ -422,4 +358,144 @@ footer {
 }
 
 
+@media (max-width: 800px) {
+    .menu {
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        
+        width: 100vw;
+        height: 90vh;
+        
+        background-color: black;
+        text-align: center;
+        
+        display: none;
+        justify-content: center;
+        gap: 20%;
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+        
+        a {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .coluna-esquerda,
+        .coluna-direita {
+            li {
+                padding-bottom: 10px;
+            }
+        }
+    }
+    
+    .menu-hamburguer div {
+        display: flex;
+    }
+}
 
+
+
+@media (min-width: 801px) and (max-width:1200px) {
+    h1 {font-size: 2.5rem;}
+    h2 {font-size: 2rem;}
+    h3 {font-size: 1.75rem;}
+    
+    p {font-size: 1.125rem;}
+    
+    nav {
+        margin: auto;
+        width: 100% ;
+    }
+    
+    .menu {
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        max-width: 800px;
+        padding-left: 10px ;
+        padding-right: 10px;
+    }   
+    
+    .coluna-direita {
+        margin-left: auto; 
+    }
+    
+    .coluna-esquerda {
+        margin-right: auto;
+    }
+    
+    .links-menu {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        
+        a {
+            font-weight: 700;
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
+@media (min-width:1201px) {
+    h1 {font-size: 3rem;}
+    h2 {font-size: 2.25rem;}
+    h3 {font-size: 2rem;}
+    
+    p {font-size: 1.25rem;}
+    
+    nav {
+        margin: auto;
+        width: 100% ;
+    }
+    
+    .menu {
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1000px;
+        padding-left: 10px ;
+        padding-right: 10px;
+    }   
+    
+    .coluna-direita {
+        margin-left: auto; 
+    }
+    
+    .coluna-esquerda {
+        margin-right: auto;
+    }
+    
+    .links-menu {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        
+        a {
+            font-weight: 700;
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    .calendario {
+       
+
+    .jogos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+}
+}
