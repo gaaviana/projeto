@@ -4,116 +4,52 @@
     box-sizing: border-box;
 }
 
-:root {
-    --cor-principal: #fff;
-    --cor-secundaria: #000;
-    --cor-destaque: #ffff00;
-    --cor-titulo: #2a2a2a;
-    --cor-subtitulo: #3e3e3e;
-    --cor-texto: #535353;
-}
-
-body,
-h1,
-h2,
-p,
-figure {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-html {
-    font-size: 16px;
-}
-
 body {
-    font-family: "Raleway", sans-serif;
-    background-color: var(--cor-secundaria);
+    background-color: black;
+    padding: 0;
+    margin: 0;
 }
-
-
-
-
-
-
-
-
-
 
 header {
-    margin: auto; /* ? mudançs novas*/
-    /* tamamho do cabeçalho pegando 10 da VH */
+    margin: auto;
     height: 10vh;
-    /*  cor de fundo preta */
-    background-color: var(--cor-secundaria);
-    /*  index para ficar na frente de todo conteudo */
-    z-index: 1;
-    /*  position sticky para fixar o cabeçalho no topo (top:0;)*/
-    top: 0;
-    position: sticky;
-    /* display flex */
+
     display: flex;
+    justify-content: center;
+    align-items: center;
 
-    justify-content: center; /*? mudançs novas*/
-    align-items: center; /*? mudançs novas*/
+    z-index: 1;
+    position: sticky;
+    top: 0;
 
-    /* ! padding distanciar das bordas */
-    padding: 10px;
-}
 
-.logo {
-    /*
-    position absolute e cordenadas para centralizar a logo
-    */
-    width: 50px; /*? mudançs novas*/
+    background-color: black;
 
-    img {
-        /* tamanho do logo */
-        width: 50px;
-    }
-}
+    .logo {
 
-nav {
-    /* colocar o menu hamburguer na direita */
-    margin-left: auto;
-}
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
 
-    .links-menu {
-        /* para o menu ficar oculto enquanto não for acionado */
-        display: none;
-        /* tirar a decoraçaão da lista */
-        list-style: none;
-        /* zerar a margin */
-        margin: 0;
-
-        a {
-
-            /* cor preta */
-            color: var(--cor-secundaria);
-            /* aumentar o peso da font  */
-            font-weight: bold;
-            /* Ajuste do espaçamento entre letras */
-            letter-spacing: 2px;
+        img {
+            width: 50px;
         }
     }
 
+    nav {
+        margin-left: auto;
+    }
+}
 
-.menu div {
-    /* para ele só ficar visivel para telas menores de 700px */
+.menu-hamburguer div {
     display: none;
-    /* largura e altura de cada div/linha do menu */
     width: 32px;
     height: 2px;
-    /* cor branca */
-    background: var(--cor-principal);
-    /* margin entre as linhas do menu */
+    background-color: white;
     margin: 8px;
-    /* suavizar a animação do menu */
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* classes para animar o menu hamburguer para quando ele estiver aberto ele virar um X  */
 .fechar .linha1 {
     transform: rotate(-45deg) translate(-8px, 8px);
 }
@@ -126,439 +62,304 @@ nav {
     transform: rotate(45deg) translate(-5px, -7px);
 }
 
-/* midia para telas até 700px */
-@media (max-width: 700px) {
-    .menu div {
-        /* para o menu ficar visivel para esse tipo de tela */
-        display: flex;
-    }
 
-    .links-menu {
-        /* para ter a posição fixa abaixo do cabeçalho, por isso o top 10vh */
+.menu {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .menu {
+        justify-content: center;
+        gap: 25%;
+
         position: absolute;
         top: 10vh;
-        /* ...  */
         right: 0;
-        /* quando aberto vai ocupar 100% da Vh */
-        width: 100vw;
-        /* cor branca */
-        background-color: var(--cor-principal);
-        /* altura pegando o resto da tela, 90vh */
-        height: 90vh;
-        /* zerar o padding */
-        padding: 0;
-        /* flex com direção em colunas */
-        flex-direction: column;
-        /* alinhar itens no centro */
-        align-items: center;
-        /* espaçamento */
-        justify-content: space-around;
 
+        width: 100vw;
+        height: 90vh;
+
+        background-color: white;
+
+        ul {
+            list-style: none;
+        }
 
         a {
-            /* tirar a decoração do link */
+            font-weight: bold;
+            color: black;
+            font-size: 1.3rem;
             text-decoration: none;
-            /* cor preta */
-            color: var(--cor-secundaria);
         }
+
+        .coluna-esquerda,
+        .coluna-direita {
+            li {
+                margin: 10px;
+            }
+        }
+    }
+
+    .menu-hamburguer div {
+        display: flex;
     }
 }
 
-/* ! mudança temporaria para remover alguns itens em telas maiores de 700px */
+.menu.aberto {
+    display: flex;
+}
+
 @media (min-width: 701px) and (max-width:1024px) {
     nav {
-       margin: auto; /*? mudançs novas*/
+        margin: auto;
+        width: 100% ;
+    }
+
+    .menu {
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        max-width: 800px;
+        padding-left: 10px ;
+        padding-right: 10px;
+    }   
+
+    .coluna-direita {
+        margin-left: auto;
+    }
+
+    .coluna-esquerda {
+        margin-right: auto;
     }
 
     .links-menu {
+        list-style: none;
+        padding: 0;
         display: flex;
-        width: 100%; /*? mudançs novas*/
-        justify-content: space-between; /*? mudançs novas*/
-        align-items: center; /*? mudançs novas*/
-        gap: 20px; /*? mudançs novas*/
-
-        margin: 0; /* Zera margens */
-        padding: 0; /* Zera padding */ 
+        flex-direction: row;
+        gap: 50px;
 
         a {
-            text-decoration: none; /*? mudançs novas*/
-            color: white; /*? mudançs novas*/
-            margin: 0; /*? mudançs novas*/
+            text-decoration: none;
+            color: white;
         }
     }
 }
 
-
-.links-menu.aberto {
-    display: flex;
-}
-
-
-
-
-
-
-
-
-
+/*      CALENDARIO       */
 
 .calendario {
-    /* display flez */
     display: flex;
-    /* faz com que o conteudo que esta para fora da tela fique escondido e vire uma barra de scroll */
     overflow-x: scroll;
-    /* 100% da largura */
     width: 100%;
-    /* altura 20 vh */
     height: 20vh;
-    /* para uma rolagem suave e controlada */
     scroll-snap-type: x mandatory;
 
 
     &::-webkit-scrollbar {
-        /* para ocultar a barra de scroll */
         display: none;
     }
 
     .jogos {
-        /* para ocupar 100$ do tamanho e os outros conteudos ir para o lado */
         flex: 0 0 100%;
-        /* para alinhar durante a rolagem */
         scroll-snap-align: start;
-        /* cor branca */
-        background-color: var(--cor-principal);
-        /* centralizar texto */
+        background-color: white;
         text-align: center;
-        /* display flex e alinhamento do restante dos itens */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
+        
         img {
-            /* tamamho das logos dos times */
-            width: 25px;
-            padding: 3px;
+            width: 35px;
+            padding-left: 5px;
+            padding-right: 5px;
         }
 
         h2 {
-            /* Ajuste do espaçamento de linha */
-            font-size: 16px;
-            /* Aumento do tamanho da fonte */
-            line-height: 1.4;
+            font-size: 16px;  
+            margin: 5px;
         }
 
         p {
-            /* Aumento do tamanho da fonte */
+            margin: 5px;
             font-size: 14px;
-            /* Ajuste do espaçamento de linha */
-            line-height: 1.4;
+           
         }
     }
 
     .proximo-jogo {
-        /* espaçamento do logo pro nome do time */
-        padding: 5px 0;
-        /* centralizar*/
         display: flex;
         justify-content: center;
-
-        p {
-            /* centralizar os nomes horizontalmente */
-            display: flex;
-            align-items: center;
-        }
+        align-items: center;
     }
 }
 
-
-
-
-
-
-
-
+/*      DESTAQUE         */
 
 
 .destaque {
     position: relative;
+    margin: 0;
 
     img {
-        /* tamanho de 80vh e largura de 100% */
         height: 80vh;
         width: 100%;
-        /* para que a imagem se ajuste ao tamanho necessario */
         object-fit: cover;
-        /* filtro de brilho  */
         filter: brightness(0.5);
     }
 
     figcaption {
-        /* centralizar texto */
         text-align: center;
-        /* deixar o texto solto porem dentro dos limites da imagem */
         position: absolute;
-        /* coordenadas para centralizar o figcaption */
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        /* espaçamento entre linhas */
         line-height: 1.6;
-        /* cor branca */
-        color: var(--cor-principal);
+        color: white;
 
         strong {
-            /* transformar o tirulo em maiusculo */
             text-transform: uppercase;
-            /* tamanho da fonte */
             font-size: 5rem;
-            /* cor branca */
-            color: var(--cor-principal);
         }
     }
 }
 
-
-
-
-
-
-
-
-
+/*      carrossel        */
 
 .container-carrossel {
     margin: auto;
-    /* ! padding para espaçamento */
-    padding-top: 2rem;
-    /* ! largura maxima de 1200px */
     max-width: 1600px;
-   
 
     h2 {
-        /* cor branca */
-        color: var(--cor-principal);
-        /* ! padding de espaçamento */
-        padding-bottom: 2rem;
-        /* centralizar texto */
+        color: white;
         text-align: center;
-        /* Tamanho aumentado */
-        font-size: 24px;
-        /* Aumento do espaçamento de linha */
-        line-height: 1.5;
     }
 
     .carrossel {
-        /* displey flex */
         display: flex;
-        /* faz com que o conteudo que esta para ora da tela fique escondido e vire uma barra de scroll */
         overflow-x: scroll;
-        /* largura de 100% */
         width: 100%;
-        /* para uma rolagem suave e controlada */
         scroll-snap-type: x mandatory;
-        /* espaçamento de 10px entre as imagens */
-        gap: 10px;
+        
 
         &::-webkit-scrollbar {
-            /* para ocultar a barra de scroll */
             display: none;
         }
 
         .item-carrossel {
+            margin: 0;
+            transform: scale(0.9);
+            transition: transform 0.5s ease;
 
             img {
-                /* altura e largura das imagens */
                 width: auto;
                 height: 50vh;
             }
+        }
+
+        .item-carrossel:hover {
+            transform: scale(1);
+        }
+
+        figcaption {
+            background-color: gray;
+            filter: brightness(0.8); 
+            text-align: center;
+            color: white;
+        }
+
+        figcaption.off {
+            background-color: red;
+            filter: brightness(0.8); 
         }
     }
 
     .insta {
 
         a {
-            /* tirar a decoração do link */
             text-decoration: none;
-            /* cor branca */
             color: #fff;
-            /* ! padding para espaçamento */
             padding: 10px 15px;
-            /* transição para animação do hover */
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        a:hover {
-            /* ! animação para quando passar o mouse no link */
-            text-transform: uppercase;
-            transform: scale(1.05);/
         }
     }
 }
 
-
-
-
-
-
-
+/*      Galeria      */
 
 .galeria {
 
     h2 {
         text-align: center;
-        /* cor branca */
-        color: var(--cor-principal);
-        /* Tamanho aumentado */
+        color: white;
         font-size: 24px;
-        /* Aumento do espaçamento de linha */
-        line-height: 1.5;
     }
 
 .galeria-container {
-    /* centralizar as imagens */
     margin: auto;
-
     display: flex;
-    /* para a imagens ir para baixo quando nao tiver mais espaço para ficar lado a lado */
     flex-wrap: wrap;
-    /* para centralizar as imagens  */
     justify-content: center;
-    /* espaçamento de 30px */
-    gap: 30px;
-    /* ! padding para espaçamento */
-    padding-top: 2rem;
-    /* ! tamanho maximo de 1200px */
+    gap: 20px;
     max-width: 1000px;
-    /* ! padding para espaçamento */
-    padding-bottom: 2rem;
 
     .foto {
-        /* ! tamamho da foto */
+        margin: 0;
         width: 340px;
-        /* para ocultar o conteudo que esteja fora da foto (no caso o figcaption)  */
         overflow: hidden;
-        /* posição relativa a figcaption */
         position: relative;
     }
 
     .foto img {
-        /* borda na imgaem */
-        /* border-radius: 20px;
-        border: solid 2px; */
-        /* largura 100% da imagem */
         width: 100%;
-        /* altura automatica */
         height: auto;
-        /* transição para o hover */
         transition: transform 0.3s ease;
     }
 
+
     .foto figcaption {
-        /* posição absoluta nos limites da foto */
         position: absolute;
-        /* coordenadas para posição */
         bottom: 0;
         left: 0;
-        /* largura de 100% */
         width: 100%;
-        /* cor de fundo */
-        background: rgba(255, 255, 255, 0.7);
-        /* cor branca */
-        color: var(--cor-principal);
-        /* ! padding para espaçamento */
+        background: lightgray;
+        color: white;
         padding: 10px;
-        /* centralizar texto */
         text-align: center;
-        /* transform para tirar o fig de dentro da foto */
         transform: translateY(100%);
-        /* transição para o hiver */
         transition: transform 0.3s ease;
     }
 
     .foto img:hover {
-        /* aumentar o tamanho da imagem */
         transform: scale(1.1);
     }
 
     .foto:hover figcaption {
-        /* fazer o fig aparecer qundo passar o mouse */
         transform: translateY(0);
     }
 }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*      SOBRE        */
 
 .sobre {
-    /* marein automatica*/
     margin: auto;
-    /* cor branca */
     background-color: white;
-    /* borda levemente arredondada */
-    border: solid 1px var(--cor-destaque);
-    border-radius: 10px;
-    /*  ! largura maxima de 800px */
     max-width: 1000px;
-    /* espaçamento entre linhas */
-    line-height: 1.6;
+    border-radius: 10px;
 }
 
 .sobre h2 {
-    /* Tamanho fo titulo*/
     font-size: 28px;
-    /* cor preta */
-    color: var(--cor-secundaria);
-    /* ! padding para espaçamento */
-    padding: 1.5rem;
-    /* centralizar titulo */
     text-align: center;
-    /* transformar em maiusculo */
-    text-transform: uppercase;
-    /* espaçamento entre as letras */
     letter-spacing: 1.5px;
-    /* peso da font */
     font-weight: bold;
 }
 
 .sobre p {
-    /* ! padding para espaçamento */
     padding: 10px;
-    /* tamamho do tetxo */
     font-size: 16px;
-    /* cor preta */
-    color: var(--cor-secundaria);
-    /* ! padding para espaçamento */
-    padding-bottom: 1rem;
-    /* espaçamento de linhas */
     line-height: 1.5;
 }
 
 /* !!! link personalizado para pag historia */
 .sobre a {
-    color: var(--cor-secundaria);
     text-decoration: none;
     font-weight: bold;
 }
@@ -567,88 +368,58 @@ nav {
     text-decoration: underline;
 }
 
-
-
-
-
-
-
-
+/*      LOCALIZAÇÃO     */
 
 .localizacao {
     iframe {
-        /* ! padding para espaçamento */
-        padding-top: 1rem;
-        /* altura e tamanho do maps */
         height: 200px;
         width: 100%;
     }
 }
 
-
-
-
-
-
-
-
+/*      RODAPÉ      */
 
 footer {
-    /* cor preta*/
-    background-color: var(--cor-secundaria);
-    /* cor branca */
-    color: var(--cor-principal);
-
+    color: white;
 }
 
 .footer-container {
-    /* ! largura maxima */
     width: 100%;
-    /* ! padding para espaçamento */
     padding: 20px;
 
     h4 {
-        /* centralizar titulo */
         text-align: center;
     }
 }
 
 .patrocinio {
-    /* displey flex */
     display: flex;
-    /* espaçamento entre as imagens */
     gap: 30px;
-    /* centralizar na horizontal */
     justify-content: center;
-    /* ! padding para espaçamento */
-    padding-bottom: 2rem;
 }
 
 .patrocinio img {
-    /* altura e largura das imagens */
     width: 75px;
     height: 75px;
 
 }
 
 .infos {
-    /* ! padding para espaçamento */
-    padding-bottom: 1rem;
 
     ul {
-        /* zerar o padding e tirar o estilo da lista */
         list-style: none;
         padding: 0;
     }
 
     ul li {
-        /* margem entre as lihhas */
         margin-bottom: 10px;
     }
 
     a {
-        /* link branco e sem decoração */
         color: #fff;
         text-decoration: none;
     }
 }
+
+
+
