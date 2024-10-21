@@ -36,7 +36,7 @@ body {
 .box {
     animation: anima-scroll linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation-range: entry 0% cover 30%;
 }
 
 header {
@@ -106,7 +106,7 @@ header {
 
 .calendario {
     width: 100%;
-    height: auto;
+    height: 20vh;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -205,7 +205,7 @@ header {
             
             img {
                 width: auto;
-                height: 50vh;
+                height: 60vh;
             }
         }
         
@@ -271,6 +271,7 @@ header {
 /*      Galeria      */
 
 .galeria {
+    
     
     h2 {
         color: white;
@@ -402,6 +403,26 @@ footer {
     a {
         color: #fff;
         text-decoration: none;
+    }
+}
+
+.mapa-site {
+    display: flex;
+    justify-content: space-around;
+
+    ul {
+        list-style: none;
+        padding: 0;
+         li {
+            margin-bottom: 10px;
+        }
+    }
+
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        margin-bottom: 1rem;
     }
 }
 
@@ -537,8 +558,8 @@ footer {
     }
 
     .calendario {
+       height: 12vh;
        
-
     .jogos {
         display: flex;
         flex-direction: row;
@@ -752,6 +773,10 @@ button:hover {
             background-color: gray; /* Destaque ao passar o mouse */
         }
     }
+
+    footer {
+        background-color: black;
+    }
 }
 
 #pag-eventos {
@@ -759,6 +784,10 @@ button:hover {
     margin: 0;
     padding: 0;
     text-align: center;
+
+    footer {
+        background-color: black;
+    }
 }
 
 
