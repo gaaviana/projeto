@@ -1,0 +1,100 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #000; /* Cor Principal */
+    color: #535353; /* Cor do Texto */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilo do título principal */
+h1 {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 2.5em;
+    margin: 20px 0;
+    color: #2a2a2a; /* Cor do Título */
+}
+
+/* Linha horizontal */
+hr {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid 000000; /* Cor de Destaque */
+}
+
+/* Estilos da tabela */
+table {
+    width: 20%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+}
+
+table caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #3e3e3e; /* Cor do Subtítulo */
+}
+
+th, td {
+    padding: 5px;
+    border: 1px solid #000000; /* Cor Secundária */
+    text-align: center;
+    background-color: #ffffff; /* Cor Alternativa */
+}
+
+th {
+    background-color: gray; /* Cor de Destaque no cabeçalho */
+    color: #000000; /* Cor Secundária no texto */
+    font-size: 1.2em;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f4f4f4; /* Tom claro para as linhas pares */
+}
+
+tbody tr:hover {
+    background-color: gray; /* Destaque ao passar o mouse */
+}
+
+/* Estilos da lista de jogos */
+ul {
+    list-style-type: none; /* Remover marcadores */
+    padding: 0;
+}
+
+ul li {
+    background-color: #ffffff; /* Cor Alternativa */
+    margin: 10px auto;
+    padding: 15px;
+    width: 60%;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ul li:hover {
+    background-color: gray; /* Destaque ao passar o mouse */
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #000000; /* Cor Secundária no rodapé */
+    color: #ffffff; /* Cor Alternativa no texto */
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
