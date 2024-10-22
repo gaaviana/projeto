@@ -14,3 +14,13 @@ botaoMenu.addEventListener("click", function(){
         botaoMenu.classList.remove("fechar")
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const campeonatosLink = document.querySelector('.links-menu li a[href="campeonatos.html"]');
+    const subMenu = document.querySelector('.links-menu .sub-menu');
+
+    campeonatosLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Impede o link de navegar
+        subMenu.classList.toggle('aberto'); // Alterna a classe 'active' para mostrar/esconder o submenu
+    });
+});

@@ -67,11 +67,34 @@ header {
     nav {
         margin-left: auto;
     }
+
+    .links-menu .sub-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 7vh;
+        background-color: white;
+        list-style: none;
+        padding: 0;
+      
+    
+        li {
+            padding-left: 10px;
+            padding-right: 25px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            a{
+            font-weight: 500;
+            }
+        }
+    }
+
+    .links-menu .sub-menu.aberto {
+        display: block; 
+    }
 }
 
-.patrocinio-nav {
-    display: none;
-}
 
 .menu-hamburguer div {
     display: none;
@@ -369,6 +392,7 @@ header {
 /*      RODAPÉ      */
 
 footer {
+    background-color: black;
     color: white;
 }
 
@@ -441,7 +465,7 @@ footer {
         width: 100vw;
         height: 90vh;
         
-        background-color: black;
+        background-color: white;
         text-align: center;
         
         display: none;
@@ -474,7 +498,6 @@ footer {
         .coluna-direita {
 
             li {
-                background-color: white;
                 padding-bottom: 10px;
                 padding-top: 10px;
             }
@@ -484,6 +507,30 @@ footer {
     .menu-hamburguer div {
         display: flex;
     }
+
+    header {
+        .links-menu .sub-menu {
+            display: none;
+            flex-direction: column;
+            position: relative;
+            background-color: white;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          
+        
+            li {
+                a{
+                font-weight: 500;
+                }
+            }
+        }
+    
+        .links-menu .sub-menu.aberto {
+            display: block; 
+        }
+    }
+   
 }
 
 
@@ -598,7 +645,6 @@ footer {
     flex-direction: column; 
     padding-left: 20px;
     padding-right: 20px;
-}
 
      h1 {
         text-align: center;
@@ -617,8 +663,7 @@ footer {
 
             img {
                 width: 100%;
-                max-width: 700px;
-                height: 500px;
+                height: auto;
                 border: solid 2px lightgray;
                 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             }
@@ -637,7 +682,7 @@ footer {
             padding: 10px;
         }
     }
-
+}
 
 #pag-comunidade {
     display: flex; 
@@ -729,74 +774,96 @@ button:hover {
 
 
 /* ??????????????????????????????????????????????????????????????? */
-
-#pag-campeonatos {
+    #pag-camp1, #pag-camp2, #pag-camp3 {
         background-color: white;
-        margin: 0;
-        padding: 0;
-        text-align: center;
+        
+        .links-menu .sub-menu {
+            background-color: black;
+        }
+    
+        header {
+            background-color: black;
+    
+            a {
+                color: white;
+            }
+    
+            .menu-hamburguer div {
+                background-color: white;
+            }
+    
+            .menu {
+                background-color: black;
+            }
 
-    .tabela {
 
-        table {
-            width: 20%;
-            margin: 20px auto;
-            border-collapse: collapse;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+        }
+    
+    .tabelas {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+        h1 {
+            text-align: center;
+            color: black;
         }
         
-        table caption {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #3e3e3e; /* Cor do Subtítulo */
+        h2 {
+            margin-top: 20px;
+            color: black;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
         }
         
         th, td {
-            padding: 5px;
-            border: 1px solid #000000; /* Cor Secundária */
+            padding: 10px;
             text-align: center;
-            background-color: #ffffff; /* Cor Alternativa */
+            border: 1px solid #ddd;
         }
         
         th {
-            background-color: gray; /* Cor de Destaque no cabeçalho */
-            color: #000000; /* Cor Secundária no texto */
-            font-size: 1.2em;
+            background-color: gray;
+            color: white;
         }
         
-        tbody tr:nth-child(even) {
-            background-color: #f4f4f4; /* Tom claro para as linhas pares */
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
         }
         
-        tbody tr:hover {
-            background-color: gray; /* Destaque ao passar o mouse */
+        tr:hover {
+            background-color: #ddd;
         }
-        
-        /* Estilos da lista de jogos */
+    
         ul {
-            list-style-type: none; /* Remover marcadores */
-            padding: 0;
+            padding-left: 20px;
+            margin-top: 10px;
+            list-style-type: none;
         }
         
         ul li {
-            background-color: #ffffff; /* Cor Alternativa */
-            margin: 10px auto;
-            padding: 15px;
-            width: 60%;
-            border-radius: 10px; /* Bordas arredondadas */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 5px 0;
+            font-size: 1.1em;
+            padding: 10px;
         }
         
-        ul li:hover {
-            background-color: gray; /* Destaque ao passar o mouse */
-        }
+        
+    }
     }
 
-    footer {
-        background-color: black;
-    }
-}
+
+/* ??????????????????????????????????????????????????????????????? */
 
 #pag-eventos {
     background-color: white;
@@ -808,6 +875,3 @@ button:hover {
         background-color: black;
     }
 }
-
-
-/* ??????????????????????????????????????????????????????????????? */
