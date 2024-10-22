@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+html {scroll-behavior: smooth;}
+
 h1, h2, h3, h4, h5, h6 {
     margin: 2rem 0; /* Espaçamento superior e inferior de 2 rem */
 }
@@ -509,25 +511,20 @@ footer {
     }
 
     header {
+
         .links-menu .sub-menu {
             display: none;
-            flex-direction: column;
             position: relative;
             background-color: white;
             list-style: none;
-            padding: 0;
-            margin: 0;
-          
-        
+            top: 0;
+       
+
             li {
-                a{
-                font-weight: 500;
-                }
+                a {
+                    font-size: 1.125rem;
+                    font-weight: 400;}
             }
-        }
-    
-        .links-menu .sub-menu.aberto {
-            display: block; 
         }
     }
    
