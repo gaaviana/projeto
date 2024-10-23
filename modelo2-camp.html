@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <title>Tabela do Campeonato</title>
 
     <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body id="pag-camp2">
     <header>
         <strong class="logo"><img src="midia/tossan-logo.png" alt=""></strong>
-    
+
         <nav>
             <div class="menu-hamburguer">
                 <div class="linha1"></div>
                 <div class="linha2"></div>
                 <div class="linha3"></div>
             </div>
-    
+
             <div class="menu">
                 <div class="coluna-esquerda">
                     <ul class="links-menu">
@@ -37,7 +41,7 @@
                         <li><a href="">Atividades</a></li>
                     </ul>
                 </div>
-            
+
                 <div class="coluna-direita">
                     <ul class="links-menu">
                         <li><a href="eventos.html">Eventos</a></li>
@@ -51,234 +55,367 @@
     </header>
     <main class="tabelas">
         <h1>Campeonato - Grupos</h1>
-        
-        <h2>Grupo A</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Time</th>
-                    <th>P</th>
-                    <th>J</th>
-                    <th>V</th>
-                    <th>E</th>
-                    <th>D</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Time A1</td>
-                    <td>10</td>
-                    <td>4</td>
-                    <td>3</td>
-                    <td>1</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Time A2</td>
-                    <td>7</td>
-                    <td>4</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Time A3</td>
-                    <td>4</td>
-                    <td>4</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Time A4</td>
-                    <td>1</td>
-                    <td>4</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>3</td>
-                </tr>
-            </tbody>
-        </table>
+        <hr>
+        <div class="estilo-tabela">
+            <div class="juntar-tabelas">
+                <table class="tabela-fixa">
+                    <thead>
+                        <tr>
+                            <th>Grupo A</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Time A1</td>
+                        </tr>
+                        <tr>
+                            <td>Time A2</td>
+                        </tr>
+                        <tr>
+                            <td>Time A3</td>
+                        </tr>
+                        <tr>
+                            <td>Time A4</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="tabela-scroll">
+                    <thead>
+                        <tr>
+                            <th>P</th>
+                            <th>J</th>
+                            <th>V</th>
+                            <th>E</th>
+                            <th>D</th>
+                            <th>GP</th>
+                            <th>GC</th>
+                            <th>SG</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10</td>
+                            <td>4</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>12</td>
+                            <td>5</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>8</td>
+                            <td>6</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>6</td>
+                            <td>10</td>
+                            <td>-4</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>11</td>
+                            <td>-9</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="lista-jogos">
+                <h2>Próximos Jogos</h2>
+                <ul>
+                    <li>Time A1 vs Time A2</li>
+                    <li>Time A3 vs Time A4</li>
+                </ul>
+            </div>
+        </div>
 
-        <h2>Grupo B</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Time</th>
-                    <th>P</th>
-                    <th>J</th>
-                    <th>V</th>
-                    <th>E</th>
-                    <th>D</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Time B1</td>
-                    <td>12</td>
-                    <td>4</td>
-                    <td>4</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Time B2</td>
-                    <td>9</td>
-                    <td>4</td>
-                    <td>3</td>
-                    <td>0</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Time B3</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Time B4</td>
-                    <td>0</td>
-                    <td>4</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>4</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="estilo-tabela">
+            <div class="juntar-tabelas">
+                <table class="tabela-fixa">
+                    <thead>
+                        <tr>
+                            <th>Grupo B</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Time A1</td>
+                        </tr>
+                        <tr>
+                            <td>Time A2</td>
+                        </tr>
+                        <tr>
+                            <td>Time A3</td>
+                        </tr>
+                        <tr>
+                            <td>Time A4</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="tabela-scroll">
+                    <thead>
+                        <tr>
+                            <th>P</th>
+                            <th>J</th>
+                            <th>V</th>
+                            <th>E</th>
+                            <th>D</th>
+                            <th>GP</th>
+                            <th>GC</th>
+                            <th>SG</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10</td>
+                            <td>4</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>12</td>
+                            <td>5</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>8</td>
+                            <td>6</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>6</td>
+                            <td>10</td>
+                            <td>-4</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>11</td>
+                            <td>-9</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="lista-jogos">
+                <h2>Próximos Jogos</h2>
+                <ul>
+                    <li>Time A1 vs Time A2</li>
+                    <li>Time A3 vs Time A4</li>
+                </ul>
+            </div>
+        </div>
 
-        <h2>Grupo C</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Time</th>
-                    <th>P</th>
-                    <th>J</th>
-                    <th>V</th>
-                    <th>E</th>
-                    <th>D</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Time C1</td>
-                    <td>8</td>
-                    <td>4</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Time C2</td>
-                    <td>6</td>
-                    <td>4</td>
-                    <td>1</td>
-                    <td>3</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Time C3</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>0</td>
-                    <td>3</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Time C4</td>
-                    <td>1</td>
-                    <td>4</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>3</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="estilo-tabela">
+            <div class="juntar-tabelas">
+                <table class="tabela-fixa">
+                    <thead>
+                        <tr>
+                            <th>Grupo C</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Time A1</td>
+                        </tr>
+                        <tr>
+                            <td>Time A2</td>
+                        </tr>
+                        <tr>
+                            <td>Time A3</td>
+                        </tr>
+                        <tr>
+                            <td>Time A4</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="tabela-scroll">
+                    <thead>
+                        <tr>
+                            <th>P</th>
+                            <th>J</th>
+                            <th>V</th>
+                            <th>E</th>
+                            <th>D</th>
+                            <th>GP</th>
+                            <th>GC</th>
+                            <th>SG</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10</td>
+                            <td>4</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>12</td>
+                            <td>5</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>8</td>
+                            <td>6</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>6</td>
+                            <td>10</td>
+                            <td>-4</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>11</td>
+                            <td>-9</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="lista-jogos">
+                <h2>Próximos Jogos</h2>
+                <ul>
+                    <li>Time A1 vs Time A2</li>
+                    <li>Time A3 vs Time A4</li>
+                </ul>
+            </div>
+        </div>
 
-        <h2>Grupo D</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Time</th>
-                    <th>P</th>
-                    <th>J</th>
-                    <th>V</th>
-                    <th>E</th>
-                    <th>D</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Time D1</td>
-                    <td>11</td>
-                    <td>4</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Time D2</td>
-                    <td>7</td>
-                    <td>4</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Time D3</td>
-                    <td>4</td>
-                    <td>4</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Time D4</td>
-                    <td>1</td>
-                    <td>4</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>3</td>
-                </tr>
-            </tbody>
-        </table>
-        <h2>Próximos Jogos</h2>
-        <ul>
-            <li>Time A1 vs Time A2</li>
-            <li>Time A3 vs Time A4</li>
-            <li>Time B1 vs Time B2</li>
-            <li>Time B3 vs Time B4</li>
-            <li>Time C1 vs Time C2</li>
-            <li>Time C3 vs Time C4</li>
-            <li>Time D1 vs Time D2</li>
-            <li>Time D3 vs Time D4</li>
-        </ul>
+        <div class="estilo-tabela">
+            <div class="juntar-tabelas">
+                <table class="tabela-fixa">
+                    <thead>
+                        <tr>
+                            <th>Grupo D</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Time A1</td>
+                        </tr>
+                        <tr>
+                            <td>Time A2</td>
+                        </tr>
+                        <tr>
+                            <td>Time A3</td>
+                        </tr>
+                        <tr>
+                            <td>Time A4</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="tabela-scroll">
+                    <thead>
+                        <tr>
+                            <th>P</th>
+                            <th>J</th>
+                            <th>V</th>
+                            <th>E</th>
+                            <th>D</th>
+                            <th>GP</th>
+                            <th>GC</th>
+                            <th>SG</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10</td>
+                            <td>4</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>12</td>
+                            <td>5</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>8</td>
+                            <td>6</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>6</td>
+                            <td>10</td>
+                            <td>-4</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>11</td>
+                            <td>-9</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="lista-jogos">
+                <h2>Próximos Jogos</h2>
+                <ul>
+                    <li>Time A1 vs Time A2</li>
+                    <li>Time A3 vs Time A4</li>
+                </ul>
+            </div>
+        </div>
     </main>
 
     <footer>
         <div class="footer-container">
-            
+
             <h4>nav</h4>
             <div class="mapa-site">
                 <ul>
@@ -292,7 +429,7 @@
                     <li><a href="eventos.html">Eventos</a></li>
                 </ul>
             </div>
-        
+
             <div class="infos">
                 <p><strong>Redes Sociais:</strong></p>
                 <a href="#">Instagram</a>
@@ -313,7 +450,8 @@
             </div>
         </div>
     </footer>
-    
+
     <script src="js/menu.js"></script>
 </body>
+
 </html>
