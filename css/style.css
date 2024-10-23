@@ -567,6 +567,8 @@ footer {
             width: 100%;
             scroll-snap-type: x mandatory;
         }
+ 
+
     }
 }
 
@@ -964,12 +966,6 @@ footer {
         .estilo-tabela {
             width: 100%;
             padding: 2rem;
-
-            .juntar-tabelas {
-                display: flex;
-                width: 100%;
-                padding: 2rem;
-            }
 
             table {
                 margin: auto;
