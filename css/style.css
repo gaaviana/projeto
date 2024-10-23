@@ -225,7 +225,7 @@ header {
 
 .container-carrossel {
     margin: auto;
-    max-width: 1800px;
+    max-width: 1700px;
 
     h2 {
         color: white;
@@ -336,7 +336,7 @@ header {
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
-        max-width: 1800px;
+        max-width: 1700px;
 
         .foto {
             margin: 0;
@@ -380,7 +380,7 @@ header {
 .sobre {
     margin: auto;
     background-color: white;
-    max-width: 1800px;
+    max-width: 1700px;
     border-radius: 10px;
 }
 
@@ -408,6 +408,8 @@ header {
 /*      LOCALIZAÇÃO     */
 
 .localizacao {
+    background-color: white;
+
     iframe {
         height: 200px;
         width: 100%;
@@ -438,25 +440,17 @@ footer {
 
 .patrocinio img {
     width: 75px;
-    height: 75px;
+    height: auto;
 
 }
 
 .infos {
+    display: flex;
+    justify-content: center;
 
-    ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    ul li {
-        margin-bottom: 10px;
-    }
-
-    a {
-        color: #fff;
-        text-decoration: none;
-    }
+   img {
+    width: 50px;
+   }
 }
 
 .mapa-site {
@@ -760,13 +754,14 @@ footer {
         display: flex;
         justify-content: center;
         gap: 2rem;
+        flex-wrap: wrap;
     }
 
     img {
-     
+        max-width: 400px;
+        max-height: 400px;
         width: 100%;
-        max-width: 300px;
-        height: 300px;
+        height: auto;
         border: solid 2px lightgray;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
@@ -776,7 +771,7 @@ footer {
         flex-direction: column;
         align-items: center;
         background-color: white;
-        max-width: 1800px;
+        max-width: 1700px;
         border-radius: 10px;
 
         h2 {
@@ -882,7 +877,7 @@ footer {
             width: 100%;
             display: flex;
             margin: auto;
-            max-width: 1800px;
+            max-width: 1700px;
 
             .juntar-tabelas {
                 display: flex;
@@ -971,7 +966,7 @@ footer {
                 margin: auto;
                 width: 100%;
                 border-collapse: collapse;
-                max-width: 1800px;
+                max-width: 1700px;
             }
 
             th,
