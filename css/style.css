@@ -67,12 +67,12 @@ header {
     justify-content: center;
     align-items: center;
 
-    z-index: 1;
+    z-index: 2;
     position: sticky;
     top: 0;
 
 
-    background-color: white;
+    background-color: black;
 
     .logo {
         position: absolute;
@@ -105,6 +105,7 @@ header {
             padding-bottom: 10px;
 
             a {
+                color: black;
                 font-weight: 500;
             }
         }
@@ -120,7 +121,7 @@ header {
     display: none;
     width: 32px;
     height: 2px;
-    background-color: black;
+    background-color: white;
     margin: 8px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -153,7 +154,7 @@ header {
 
 .calendario {
     width: 100%;
-    height: 20vh;
+    height: auto;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -191,6 +192,7 @@ header {
 
 .destaque {
     position: relative;
+    height: auto;
     margin: 0;
 
     img {
@@ -448,9 +450,9 @@ footer {
     display: flex;
     justify-content: center;
 
-   img {
-    width: 50px;
-   }
+    img {
+        width: 50px;
+    }
 }
 
 .mapa-site {
@@ -561,7 +563,7 @@ footer {
             width: 100%;
             scroll-snap-type: x mandatory;
         }
- 
+
 
     }
 }
@@ -617,7 +619,7 @@ footer {
         a {
             font-weight: 700;
             text-decoration: none;
-            color: black;
+            color: white;
         }
     }
 
@@ -672,12 +674,12 @@ footer {
         a {
             font-weight: 700;
             text-decoration: none;
-            color: black;
+            color: white;
         }
     }
 
     .calendario {
-        height: 12vh;
+
 
         .jogos {
             display: flex;
@@ -741,7 +743,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
- 
+
     h1 {
         color: white;
     }
@@ -843,26 +845,6 @@ footer {
 #pag-camp2,
 #pag-camp3 {
     background-color: white;
-
-    .links-menu .sub-menu {
-        background-color: black;
-    }
-
-    header {
-        background-color: black;
-
-        a {
-            color: white;
-        }
-
-        .menu-hamburguer div {
-            background-color: white;
-        }
-
-        .menu {
-            background-color: black;
-        }
-    }
 }
 
 #pag-camp1,
@@ -975,8 +957,8 @@ footer {
                 padding: 10px;
                 border: 1px solid #ddd;
             }
+        }
     }
-}
 }
 
 
@@ -990,7 +972,97 @@ footer {
     padding: 0;
     text-align: center;
 
+    .eventos {
+
+        figure {
+            margin: 0;
+            
+
+            img {
+                width: 100%;
+            }
+        }
+
+        div {
+            .button-hallo {
+                position: relative;
+                /* Necessário para posicionar os pseudo-elementos */
+                background-color: #FF4500;
+                /* Laranja Escuro */
+                color: white;
+                /* Cor do texto */
+               border: none;
+                /* Roxo Profundo */
+                border-radius: 5px;
+                /* Bordas arredondadas */
+                padding: 10px 20px;
+                /* Espaçamento interno */
+                font-size: 16px;
+                /* Tamanho da fonte */
+                text-transform: uppercase;
+                /* Letras maiúsculas */
+                text-decoration: none;
+                /* Sem sublinhado */
+                display: inline-block;
+                /* Permite margens e padding */
+                overflow: hidden;
+                /* Esconde a parte do fogo que sai do botão */
+                transition: transform 0.3s;
+                /* Efeito de transição ao passar o mouse */
+            }
+
+            .button-hallo:hover {
+                transform: scale(1.05);
+                /* Efeito de aumentar ao passar o mouse */
+            }
+
+            .button-hallo::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(45deg, rgba(255, 69, 0, 0.8), rgba(255, 215, 0, 0.8), rgba(255, 0, 0, 0.8));
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0);
+                border-radius: 50%;
+                z-index: 0;
+                animation: fire 0.6s infinite alternate;
+                /* Animação de fogo */
+                opacity: 0;
+                /* Inicia invisível */
+            }
+
+            .button-hallo:hover::before {
+                animation: fire 0.6s infinite alternate;
+                /* Ativa animação ao passar o mouse */
+                opacity: 1;
+                /* Fica visível */
+            }
+        }
+
+        .container-carrossel {
+           h2{ color: black;}
+        }
+
+        .galeria {
+            h2{color: black;}
+        }
+    }
+
     footer {
         background-color: black;
+    }
+}
+
+@keyframes fire {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0;
     }
 }
