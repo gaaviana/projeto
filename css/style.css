@@ -198,7 +198,7 @@ header {
     img {
         height: 80vh;
         width: 100%;
-        object-fit: cover;
+        object-fit: hidden;
         filter: brightness(0.5);
     }
 
@@ -349,7 +349,7 @@ header {
 
         .foto img {
             width: 100%;
-            height: auto;
+            height: 40vh;
             transition: transform 0.3s ease;
         }
 
@@ -766,6 +766,12 @@ footer {
         height: auto;
         border: solid 2px lightgray;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transform: scale(0.9);
+        transition: ease-in 0.3s;
+    }
+
+    img:hover {
+        transform: scale(1);
     }
 
     .comunidade {
@@ -789,6 +795,13 @@ footer {
             line-height: 1.8;
             padding: 10px;
         }
+
+        .insta-corp {
+        display: flex;
+        justify-content: center;
+        }
+
+
     }
 
 
@@ -861,11 +874,23 @@ footer {
             margin: auto;
             max-width: 1700px;
 
+            .jogos {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                img {
+                    width: 75px;
+                }
+            }
+
             .juntar-tabelas {
                 display: flex;
                 width: 100%;
                 padding: 2rem;
             }
+
 
             table {
                 border-collapse: collapse;
@@ -943,6 +968,18 @@ footer {
         .estilo-tabela {
             width: 100%;
             padding: 2rem;
+
+            
+            .jogos {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                img {
+                    width: 75px;
+                }
+            }
 
             table {
                 margin: auto;

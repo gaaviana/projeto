@@ -52,10 +52,10 @@
 
 
     <main id="pag-comunidade">
-        <h1>comunidade</h1>
+        <h1>Comunidade</h1>
         <div class="comunidade">
         <article class="opiniao box">
-            <h2>Opnião da Galera</h2>
+            <h2>Opinião da Galera</h2>
             <p>Descubra as histórias e experiências que unem nosso time e a comunidade.
             </p>
             <figure>
@@ -70,18 +70,18 @@
             <p>Nosso time vai além do futebol, somos um verdadeiro agente de transformação na comunidade! Promovemos campeonatos emocionantes e eventos que envolvem a juventude em atividades esportivas, garantindo saúde e diversão para todos. E não paramos por aí, nossas festas e celebrações em datas especiais são momentos únicos de união e alegria, onde cada sorriso conta. Acreditamos que cada passe, cada gol e cada evento são oportunidades de criar laços fortes e impactar vidas de maneira positiva!
             </p>
 
-            <figure>
-                <img src="midia/imagem-aprimorada.png" alt="">
-                <img src="midia/imagem-aprimorada.png" alt="">
-                <img src="midia/imagem-aprimorada.png" alt="">
+            <figure class="box">
+                <img src="midia/comunidade1.png" alt="">
+                <img src="midia/comunidade2.png" alt="">
+                <img src="midia/comunidade3.png" alt="">
             </figure>
         </article>
 
         
         <article class="box">
-            <h2>Comentarios</h2>
+            <h2>Comentário</h2>
             <p>Deixe sua opinião e compartilhe suas experiências com a gente! Sua voz é importante para nós!</p>
-            <form action="">
+            <form id="my-form" action="https://formspree.io/f/mldedvjw" method="post">
                 <div>
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" required>
@@ -91,7 +91,7 @@
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div>
-                    <label for="comentario">Comentário:</label>
+                    <label for="comentario">Assunto:</label>
                     <select id="comentario" name="comentario" required>
                         <option value="" disabled selected>Selecione uma opção</option>
                         <option value="critica">Crítica</option>
@@ -105,7 +105,8 @@
                     <label for="comentario">Comentário:</label>
                     <textarea id="comentario" name="comentario" rows="4" required></textarea>
                 </div>        
-                <button type="submit">Enviar</button>
+                <button id="my-form-button" type="submit">Enviar</button>
+                <p id="my-form-status"></p>
             </form>
         </div>
         </article>
@@ -141,6 +142,7 @@
         </div>
     </footer>
 
+    <script src="js/comunidade.js"></script>
     <script src="js/menu.js"></script>
 </body>
 </html>
