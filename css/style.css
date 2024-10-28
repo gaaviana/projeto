@@ -200,6 +200,7 @@ header {
         width: 100%;
         object-fit: hidden;
         filter: brightness(0.5);
+        overflow: hidden;
     }
 
     figcaption {
@@ -215,11 +216,23 @@ header {
 
 
         strong {
-
             letter-spacing: 5px;
             font-family: "Anton", sans-serif;
             font-size: calc(5rem + 3vw);
         }
+    }
+}
+
+@media (max-height: 600px) {
+    .destaque {
+        figcaption {
+            font-size: 14px;
+
+            strong {
+                font-size: 4rem;
+            }
+        }
+
     }
 }
 
@@ -711,7 +724,7 @@ footer {
         flex-direction: column;
         align-items: center;
         background-color: white;
-        max-width: 1800px;
+        max-width: 1700px;
         border-radius: 10px;
 
         img {
@@ -797,8 +810,8 @@ footer {
         }
 
         .insta-corp {
-        display: flex;
-        justify-content: center;
+            display: flex;
+            justify-content: center;
         }
 
 
@@ -948,7 +961,7 @@ footer {
 
             tr:hover {
                 background-color: lightgray;
-             }
+            }
         }
     }
 }
@@ -973,7 +986,7 @@ footer {
             width: 100%;
             padding: 2rem;
 
-            
+
             .jogos {
                 display: flex;
                 align-items: center;
@@ -1000,7 +1013,7 @@ footer {
             }
 
             tr:hover {
-               background-color: lightgray;
+                background-color: lightgray;
             }
         }
     }
@@ -1012,16 +1025,20 @@ footer {
 /* ??????????????????????????????????????????????????????????????? */
 
 #pag-eventos {
-    background-color: white;
-    margin: 0;
-    padding: 0;
-    text-align: center;
 
+    color: white;
+    text-align: center;
+    
     .eventos {
+        background-color: white;
+        color: black;
+        border-radius: 10px;
+   
+        h2 {padding-top: 2rem;}
 
         figure {
             margin: 0;
-            
+
 
             img {
                 width: 100%;
@@ -1036,7 +1053,7 @@ footer {
                 /* Laranja Escuro */
                 color: white;
                 /* Cor do texto */
-               border: none;
+                border: none;
                 /* Roxo Profundo */
                 border-radius: 5px;
                 /* Bordas arredondadas */
@@ -1087,11 +1104,19 @@ footer {
         }
 
         .container-carrossel {
-           h2{ color: black;}
+            h2 {
+                text-align: center;
+                color: black;
+                padding: 0;
+            }
         }
 
         .galeria {
-            h2{color: black;}
+            h2 {
+                text-align: center;
+                color: black;
+                padding: 0;
+            }
         }
     }
 
@@ -1109,5 +1134,137 @@ footer {
     100% {
         transform: translate(-50%, -50%) scale(1.2);
         opacity: 0;
+    }
+}
+
+#pag-atividades {
+
+    h1 {
+        color: white;
+        text-align: center;
+    }
+
+    .atividades {
+        max-width: 1800px;
+        background-color: white;
+        margin: auto;
+        border-radius: 10px;
+
+
+
+        p {
+            text-align: center;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            padding: 10px;
+        }
+
+
+
+        .titulo {
+            text-align: center;
+        }
+
+        .beneficios {
+            h2 {
+                text-align: center;
+                padding: 2rem;
+                margin: 0;
+            }
+        }
+
+
+        .container-carrossel {
+            margin: auto;
+            max-width: 1700px;
+
+            h3 {
+                margin: 2rem;
+                color: black;
+
+            }
+
+            .carrossel {
+                display: flex;
+                overflow-x: auto;
+                width: 100%;
+                scroll-snap-type: x mandatory;
+                align-items: center;
+                scrollbar-width: none;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .item-carrossel {
+                    margin: 0;
+                    transform: scale(0.9);
+                    transition: transform 0.5s ease;
+                    scroll-snap-align: start;
+                    flex: 0 0 auto;
+
+
+                    img {
+                        width: auto;
+                        height: 30vh;
+                    }
+                }
+
+                .item-carrossel:hover {
+                    transform: scale(1);
+                }
+
+            }
+
+            .botao {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1rem;
+            }
+
+            button {
+                background-color: black;
+                color: white;
+                border: white 1px solid;
+                border-radius: 10px;
+                padding: 12px 24px;
+                font-size: 16px;
+                cursor: pointer;
+                margin: 0 10px;
+                text-align: center;
+                width: 100px;
+            }
+
+            button:hover {
+                transform: translateY(-2px);
+            }
+
+            button:active {
+                transform: translateY(0);
+            }
+        }
+
+        .instagram-media {
+            display: inline !important;
+            width: 100%;
+            max-width: 700px;
+        }
+
+        /* Só usar !important em situações realmente necessárias */
+
+        .instagram-container {
+            text-align: center;
+
+        }
+
+        .aulas-gratis {
+
+            h4,
+            h2 {
+                text-align: center;
+            }
+        }
     }
 }

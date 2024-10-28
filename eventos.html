@@ -1,74 +1,169 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
-        <link rel="icon" href="midia/tossan-logo.png" type="image/png" sizes="32x32">
-    
-    
-        <title>Tossan F.C.</title>
-    
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-<header>
-    <strong class="logo"><img src="midia/tossan-logo.png" alt=""></strong>
+<html lang="en">
 
-    <nav>
-        <div class="menu-hamburguer">
-            <div class="linha1"></div>
-            <div class="linha2"></div>
-            <div class="linha3"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="midia/tossan-logo.png" type="image/png" sizes="32x32">
+
+
+    <title>Tossan F.C.</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <strong class="logo"><img src="midia/tossan-logo.png" alt=""></strong>
+    
+        <nav>
+            <div class="menu-hamburguer">
+                <div class="linha1"></div>
+                <div class="linha2"></div>
+                <div class="linha3"></div>
+            </div>
+    
+            <div class="menu">
+                <div class="coluna-esquerda">
+                    <ul class="links-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="campeonatos.html">Campeonatos</a>
+                            <ul class="sub-menu">
+                                <li><a href="camp-mata-mata.html">Copa J.A.</a></li>
+                                <li><a href="camp-grupo.html">Grupos</a></li>
+                                <li><a href="campeonatos.html">Liga</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="atividades-esportivas.html">Atividades</a></li>
+                    </ul>
+                </div>
+            
+                <div class="coluna-direita">
+                    <ul class="links-menu">
+                        <li><a href="eventos.html">Eventos</a></li>
+                        <li><a href="comunidade.html">Comunidade</a></li>
+                        <li><a href="historia.html">Historia</a></li>
+                    </ul>
+                </div>
+            </div>
+            </ul>
+        </nav>
+    </header>
+    <main id="pag-eventos">
+        <h1>Eventos</h1>
+        <div class="eventos">
+        <h2>VOCÊ NÃO PODE PERDER</h2>
+        <figure>
+            <img src="midia/fundo.destaque.png" alt="">
+        </figure>
+        <div>
+            <button class="button-hallo">Garanta ja o seu ingresso</button>
         </div>
 
-        <div class="menu">
-            <div class="coluna-esquerda">
-                <ul class="links-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="campeonatos.html">Campeonatos</a>
-                        <ul class="sub-menu">
-                            <li><a href="camp-mata-mata.html">Copa J.A.</a></li>
-                            <li><a href="camp-grupo.html">Grupos</a></li>
-                            <li><a href="campeonatos.html">Liga</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="">Atividades</a></li>
-                </ul>
-            </div>
+        <article class="container-carrossel box">
+            <h2>Eventos Esportivos</h2>
+                <div class="carrossel" id="carrossel">
+                    <figure class="item-carrossel">
+                        <a href="camp-mata-mata.html"><img src="midia/jogo2.png" alt="Quartas de Final, Brasiliense X Familia Os 300 "></a>
+                        <figcaption>EM BREVE</figcaption>
+                    </figure>
+                    <figure class="item-carrossel">
+                        <a href="camp-mata-mata.html"><img src="midia/jogo1.png" alt="Quartas de Final, Juventude X Kamaleão"></a>
+                        <figcaption>EM BREVE</figcaption>
+                    </figure>
+                    <figure class="item-carrossel">
+                        <a href="camp-mata-mata.html"><img src="midia/jogo3.png" alt="Quartas de Final, Falcões do Morro X JD. Laura"></a>
+                        <figcaption>EM BREVE</figcaption>
+                    </figure>
+                    <figure class="item-carrossel">
+                        <a href="camp-mata-mata.html"><img src="midia/jogo4.png" alt="Quartas de Final, Meninos Da 18 X Gas Da Leste"></a>
+                        <figcaption>EM BREVE</figcaption>
+                    </figure>
+                </div>
+            
+                    <div class="botao">
+                    <button id="prevBtn">Voltar</button>
+                    <button id="nextBtn">Avançar</button>,
+                    </div>
+        </article>
+
+        <article class="container-carrossel box">
+            <h2>Eventos Festivos</h2>
+                <div class="carrossel" id="carrossel">
+                    <figure class="item-carrossel">
+                        <a href=""><img src="midia/poximos-eventos.png" alt="Postagem 1"></a>
+                        <figcaption>EM BREVE</figcaption>
+                    </figure>
+                    <figure class="item-carrossel">
+                        <a href=""><img src="midia/poximos-eventos.png" alt="Postagem 2"></a>
+                        <figcaption>EM BREVE</figcaption>
+                    </figure>
+                    <figure class="item-carrossel">
+                        <a href=""><img src="midia/poximos-eventos.png" alt="Postagem 3"></a>
+                        <figcaption>EM BREVE</figcaption>
+                    </figure>
+                    <figure class="item-carrossel">
+                        <a href=""><img src="midia/poximos-eventos.png" alt="Postagem 4"></a>
+                        <figcaption>EM BREVE</figcaption>
+                    </figure>
+                    <figure class="item-carrossel">
+                        <a href=""><img src="midia/poximos-eventos.png" alt="Postagem 5"></a>
+                        <figcaption class="off">EM BREVE / ESGOTADO</figcaption>
+                    </figure>
+                </div>
+            
+                    <div class="botao">
+                    <button id="prevBtn">Voltar</button>
+                    <button id="nextBtn">Avançar</button>,
+                    </div>
+        </article>
         
-            <div class="coluna-direita">
-                <ul class="links-menu">
-                    <li><a href="evento.html">Eventos</a></li>
-                    <li><a href="comunidade.html">Comunidade</a></li>
-                    <li><a href="historia.html">Historia</a></li>
-                </ul>
-            </div>
-        </div>
-        </ul>
-    </nav>
-</header>
+        <article class="galeria box">
+            <h2>Eventos Passados</h2>
+            <div class="galeria-container">
 
-<body id="pag-eventos">
-    <h1>Eventos</h1>
-    <h2>Hallowen do Tossan</h2>
-    <img src="midia/Hallowen.png" alt="Hallowen">
-    <p>Hallowen uma festa terrivelmente animada.
-    Dia 26 de outubro no Tossan F.C.</p>
-    <hr>
-    <h2>Festival da Juventude</h2>
-    <img src="midia/Festival da Juventude.png" alt="Festival da Juventude">
-    <p>A Edição número 02 do Festival da Juventude está chegando no CDC TOSSAN nos dias 13, 14 e 15 de setembro a partir das 9 horas da manhã.</p>
-    <hr>
-    <h2>Festa Junina</h2>
-    <img src="midia/Festa Junina Tossan.png" alt="Festa Junina">
-    <p>Festa Junina do Tossan muita música, diversão e atrações para todas as idades.</p>
+                <a data-lightbox="foto" data-title="Campo" href="midia/imagem-aprimorada.png">
+                    <figure class="foto">
+                            <img src="midia/imagem-aprimorada.png" alt="Foto 1">
+                        <figcaption>Campo</figcaption>
+                    </figure>
+                </a>    
+              
+                <a data-lightbox="foto" data-title="Quadra" href="midia/imagem-aprimorada.png">
+                    <figure class="foto">
+                            <img src="midia/imagem-aprimorada.png" alt="Foto 2">
+                        <figcaption>Quadra</figcaption>
+                    </figure>
+                </a>
+
+                <a data-lightbox="foto" data-title="Cantinas" href="midia/imagem-aprimorada.png">
+                    <figure class="foto">
+                            <img src="midia/imagem-aprimorada.png" alt="Foto 3">
+                    <figcaption>Cantinas</figcaption>
+                 </figure>
+                </a>
+
+                <a data-lightbox="foto" data-title="Salão de Festas" href="midia/imagem-aprimorada.png">
+                    <figure class="foto">
+                            <img src="midia/imagem-aprimorada.png" alt="Foto 4">
+                    <figcaption>Salão de Festas</figcaption>
+                 </figure>
+                </a>
+                
+            </div>
+        </article>
+    </div>
+    </main>
+
+
     <footer>
         <div class="footer-container">
-            
-            
+
+
             <div class="mapa-site">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -81,11 +176,11 @@
                     <li><a href="eventos.html">Eventos</a></li>
                 </ul>
             </div>
-            
+
             <div class="infos">
-             <a href="https://www.instagram.com/tossan_fc" target="_blank"><img src="midia/instagram.png" alt=""></a>
+                <a href="https://www.instagram.com/tossan_fc" target="_blank"><img src="midia/instagram.png" alt=""></a>
             </div>
-            
+
             <h4>Patrocinadores</h4>
             <div class="patrocinio">
                 <img src="midia/tossan-logo.png" alt="Patrocinador 1">
@@ -94,7 +189,10 @@
             </div>
         </div>
     </footer>
-   
-</body>
+
+    
+    <script src="js/carrossel.js"></script>
     <script src="js/menu.js"></script>
+</body>
+
 </html>
