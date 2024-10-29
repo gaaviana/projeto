@@ -1,15 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const carrossel = document.getElementById('carrossel');
-    const nextBtn = document.getElementById('nextBtn');
-    const prevBtn = document.getElementById('prevBtn');
-
+    const carrosseis = document.querySelectorAll('.carrossel'); // Seleciona todos os carrosséis
     const scrollAmount = 300; // Quantidade de pixels para rolar
 
-    nextBtn.addEventListener('click', () => {
-        carrossel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    });
+    carrosseis.forEach(carrossel => {
+        const nextBtn = carrossel.parentElement.querySelector('#nextBtn'); // Botão "Avançar" no mesmo artigo
+        const prevBtn = carrossel.parentElement.querySelector('#prevBtn'); // Botão "Voltar" no mesmo artigo
 
-    prevBtn.addEventListener('click', () => {
-        carrossel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                carrossel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                carrossel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+        }
     });
 });
