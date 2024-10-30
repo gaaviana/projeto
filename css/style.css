@@ -584,6 +584,7 @@ footer {
 
     .estilo-tabela {
         flex-direction: column;
+        
     }
 
     .tabela-combinada {
@@ -907,17 +908,18 @@ footer {
     display: flex;
     
     justify-content: space-around;
-    max-width: 1700px;
     padding: 2rem; 
 }
 
 #pag-camp1 main .estilo-tabela .jogos,
 #pag-camp2 main .estilo-tabela .jogos,
 #pag-camp3 main .estilo-tabela .jogos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
     gap: 10px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #pag-camp1 main .estilo-tabela .jogos img,
@@ -939,16 +941,14 @@ footer {
 #pag-camp2 main .estilo-tabela td,
 #pag-camp3 main .estilo-tabela th,
 #pag-camp3 main .estilo-tabela td {
+    width: 100%;
     text-align: center;
     padding: 10px;
     border: 1px solid #ddd;
 }
 
 
-#pag-camp1 main .estilo-tabela .lista-jogos,
-#pag-camp2 main .estilo-tabela .lista-jogos {
-    padding: 2rem;
-}
+
 
 #pag-camp1 main .estilo-tabela .lista-jogos h2,
 #pag-camp2 main .estilo-tabela .lista-jogos h2 {
@@ -985,6 +985,13 @@ footer {
 #pag-camp2 main .estilo-tabela tr:hover,
 #pag-camp3 main .estilo-tabela tr:hover {
     background-color: lightgray;
+}
+
+#pag-camp1 main .estilo-tabela th:first-child, td:first-child,
+#pag-camp2 main .estilo-tabela th:first-child, td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #fff;  
 }
 
 #pag-camp3 main h2 {
@@ -1128,7 +1135,7 @@ footer {
 #pag-atividades .atividades .instagram-media {
     display: inline !important;
     width: 100%;
-    max-width: 500px;
+    max-width: 300px;
     max-height: 500px;
 }
 
