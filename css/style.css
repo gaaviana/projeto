@@ -586,11 +586,7 @@ footer {
         flex-direction: column;
     }
 
-    .estilo-tabela .separador-div {
-        display: none;
-    }
-
-    .estilo-tabela .tabela-scroll {
+    .tabela-combinada {
         display: block;
         flex-direction: column;
         overflow-x: auto;
@@ -895,6 +891,7 @@ footer {
 #pag-camp2,
 #pag-camp3 {
     background-color: white;
+   
 }
 
 #pag-camp1 main h1,
@@ -908,9 +905,10 @@ footer {
 #pag-camp3 main .estilo-tabela {
     width: 100%;
     display: flex;
-    justify-content: center;
+    
+    justify-content: space-around;
     max-width: 1700px;
-    padding: 2rem;
+    padding: 2rem; 
 }
 
 #pag-camp1 main .estilo-tabela .jogos,
@@ -928,11 +926,6 @@ footer {
     width: 50px;
 }
 
-#pag-camp1 main .estilo-tabela .juntar-tabelas,
-#pag-camp2 main .estilo-tabela .juntar-tabelas {
-    display: flex;
-    width: 100%;
-}
 
 #pag-camp1 main .estilo-tabela table,
 #pag-camp2 main .estilo-tabela table,
@@ -949,12 +942,6 @@ footer {
     text-align: center;
     padding: 10px;
     border: 1px solid #ddd;
-}
-
-#pag-camp1 main .estilo-tabela td img,
-#pag-camp2 main .estilo-tabela td img,
-#pag-camp3 main .estilo-tabela td img {
-    width: 50px;
 }
 
 
@@ -986,17 +973,6 @@ footer {
     border-bottom: solid 1px;
 }
 
-#pag-camp1 main .estilo-tabela .tabela-fixa,
-#pag-camp2 main .estilo-tabela .tabela-fixa {
-    width: 100%;
-    border-right: 2px solid #ddd;
-}
-
-#pag-camp1 main .estilo-tabela .tabela-scroll,
-#pag-camp2 main .estilo-tabela .tabela-scroll {
-    flex-direction: column;
-    width: 100%;
-}
 
 #pag-camp1 main .estilo-tabela td:nth-child(odd),
 #pag-camp1 main .estilo-tabela th:nth-child(odd),
