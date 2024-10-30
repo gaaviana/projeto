@@ -15,6 +15,7 @@ h4,
 h5,
 h6 {
     margin: 2rem 0;
+    line-height: 1.8;
 }
 
 h1 {
@@ -31,6 +32,7 @@ h3 {
 
 p {
     font-size: 1rem;
+    line-height: 1.8;
 }
 
 body {
@@ -40,6 +42,11 @@ body {
     margin: 0;
 }
 
+
+
+
+
+/* ---> animação de entrada do conteudo <--- */
 @keyframes anima-scroll {
     0% {
         opacity: 0;
@@ -57,16 +64,20 @@ body {
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
 }
+/* --->     <--- */
 
+
+
+
+
+/* --->     cabeçalho   <--- */
 header {
-    z-index: 2;
+    z-index: 1;
     position: sticky;
     top: 0;
 
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin: auto;
 
     height: 10vh;
     background-color: black;
@@ -79,14 +90,19 @@ header .logo {
 }
 
 header .logo img {
-    height: 5vh;
+    height: 6.5vh;
 }
-
 
 nav {
     margin-left: auto;
 }
+/* --->     <--- */
 
+
+
+
+
+/* --->     menu    <--- */
 .links-menu .sub-menu {
     display: none;
     flex-direction: column;
@@ -95,7 +111,6 @@ nav {
     background-color: white;
     list-style: none;
     padding: 0;
-
 }
 
 .links-menu .sub-menu li {
@@ -109,9 +124,7 @@ nav {
 
 .links-menu .sub-menu.aberto {
     display: flex;
-    /* Alterado de block para flex */
 }
-
 
 .menu-hamburguer div {
     display: none;
@@ -141,10 +154,13 @@ nav {
 .menu.aberto {
     display: flex;
 }
+/* --->     <--- */
 
 
 
-/*      CALENDARIO       */
+
+
+/* --->     calendario      <--- */
 
 .calendario {
     width: 100%;
@@ -179,10 +195,13 @@ nav {
     justify-content: center;
     align-items: center;
 }
+/* --->     <--- */
 
-/*      DESTAQUE         */
 
 
+
+
+/* --->     destaque        <--- */
 .destaque {
     position: relative;
     height: auto;
@@ -192,9 +211,8 @@ nav {
 .destaque img {
     height: 80vh;
     width: 100%;
-    object-fit: hidden;
     filter: brightness(0.5);
-    overflow: hidden;
+  
 }
 
 .destaque figcaption {
@@ -214,9 +232,14 @@ nav {
     font-family: "Anton", sans-serif;
     font-size: calc(5rem + 3vw);
 }
+/* --->     <--- */
 
 
-@media (max-height: 800px) {
+
+
+
+/* --->     media para altura       <--- */
+@media (max-height: 500px) {
     header {
         height: 50px;
     }
@@ -233,9 +256,13 @@ nav {
         font-size: 4rem;
     }
 }
+/* --->     <--- */
 
-/*      carrossel        */
 
+
+
+
+/* --->     carrossel       <--- */
 .container-carrossel {
     margin: auto;
     max-width: 1700px;
@@ -269,7 +296,7 @@ nav {
 
 .container-carrossel .carrossel .item-carrossel img {
     width: auto;
-    height: 60vh;
+    height: 50vh;
 }
 
 .container-carrossel .carrossel .item-carrossel:hover {
@@ -302,7 +329,6 @@ nav {
 .container-carrossel .botao {
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-top: 1rem;
 }
 
@@ -326,17 +352,19 @@ nav {
 .container-carrossel button:active {
     transform: translateY(0);
 }
+/* --->     <--- */
 
 
-/*      Galeria      */
 
+
+
+/* --->     galeria     <--- */
 .galeria h2 {
     color: white;
     padding-left: 2rem;
 }
 
 .galeria .galeria-container {
-    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -353,7 +381,7 @@ nav {
 
 .galeria .galeria-container .foto img {
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     transition: transform 0.3s ease;
 }
 
@@ -377,9 +405,13 @@ nav {
 .galeria .galeria-container .foto:hover figcaption {
     transform: translateY(0);
 }
+/* --->     <--- */
 
-/*      SOBRE        */
 
+
+
+
+/* --->     sobre       <--- */
 .sobre {
     margin: auto;
     margin-bottom: 2rem;
@@ -400,7 +432,6 @@ nav {
     line-height: 1.5;
 }
 
-/* !!! link personalizado para pag historia */
 .sobre a {
     text-decoration: none;
     font-weight: bold;
@@ -409,22 +440,28 @@ nav {
 .sobre a:hover {
     text-decoration: underline;
 }
+/* --->     <--- */
 
-/*      LOCALIZAÇÃO     */
 
-.localizacao {
-    display: flex;
-    justify-content: center;
-}
 
+
+
+/* --->  localização   <--- */
 .localizacao iframe {
-    max-width: 1400px;
+    display: flex;
+    
+    max-width: 1000px;
     height: 200px;
     width: 100%;
+    margin: auto;
 }
+/* --->  localização   <--- */
 
-/*      RODAPÉ      */
 
+
+
+
+/* --->  rodapé   <--- */
 footer {
     background-color: black;
     color: white;
@@ -478,7 +515,13 @@ footer {
     text-decoration: none;
     margin-bottom: 1rem;
 }
+/* --->     <--- */
 
+
+
+
+
+/* --->  media para celular   <--- */
 @media (max-width: 800px) {
     .menu {
         position: absolute;
@@ -555,8 +598,13 @@ footer {
         scroll-snap-type: x mandatory;
     }
 }
+/* --->     <--- */
 
 
+
+
+
+/* --->  media tablet   <--- */
 @media (min-width: 801px) and (max-width:1200px) {
     h1 {
         font-size: 2.5rem;
@@ -611,7 +659,13 @@ footer {
     }
 
 }
+/* --->     <--- */
 
+
+
+
+
+/* --->  media desktop   <--- */
 @media (min-width: 1201px) {
     h1 {
         font-size: 3rem;
@@ -673,8 +727,13 @@ footer {
         gap: 30px;
     }
 }
+/* --->   <--- */
 
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+
+
+/* --->  pag historia   <--- */
 #pag-historia {
     display: flex;
     justify-content: center;
@@ -685,8 +744,6 @@ footer {
 #pag-historia h1 {
     text-align: center;
     color: white;
-    font-size: 2.5rem;
-    margin: 2rem;
 }
 
 #pag-historia .historia {
@@ -713,10 +770,15 @@ footer {
 
 #pag-historia .historia p {
     margin-bottom: 2rem;
-    line-height: 1.8;
     padding: 20px;
 }
+/* --->     <--- */
 
+
+
+
+
+/* --->  pag comunidade   <--- */
 #pag-comunidade {
     display: flex;
     justify-content: center;
@@ -765,15 +827,13 @@ footer {
 
 #pag-comunidade .comunidade h2 {
     text-align: center;
-    font-size: 2rem;
     margin: 2rem;
 }
 
 #pag-comunidade .comunidade p {
     text-align: center;
-    font-size: 1rem;
     margin-bottom: 2rem;
-    line-height: 1.8;
+    
     padding: 10px;
 }
 
@@ -792,7 +852,6 @@ footer {
 #pag-comunidade textarea {
     width: 100%;
     padding: 10px;
-    /* Espaçamento interno */
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
@@ -818,9 +877,7 @@ footer {
 #pag-comunidade button:hover {
     background-color: #fdd835;
 }
-
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
+/* --->     <--- */
 
 
 
@@ -829,19 +886,19 @@ footer {
 
 
 
-/* ??????????????????????????????????????????????????????????????? */
+
+
+/* --->   tabelas  <--- */
 #pag-camp1,
 #pag-camp2,
 #pag-camp3 {
     background-color: white;
 }
 
-#pag-camp1 main,
-#pag-camp2 main,
-#pag-camp3 main {
-    h1 {
-        text-align: center;
-    }
+#pag-camp1 main h1,
+#pag-camp2 main h1,
+#pag-camp3 main h1{
+        text-align: center;  
 }
 
 #pag-camp1 main .estilo-tabela,
@@ -849,7 +906,7 @@ footer {
 #pag-camp3 main .estilo-tabela {
     width: 100%;
     display: flex;
-    margin: auto;
+    justify-content: center;
     max-width: 1700px;
     padding: 2rem;
 }
@@ -958,13 +1015,13 @@ footer {
     margin: auto;
     max-width: 1700px;
 }
+/* --->     <--- */
 
 
 
 
 
-/* ??????????????????????????????????????????????????????????????? */
-
+/* --->     pag eventos     <--- */
 #pag-eventos {
     color: white;
     text-align: center;
@@ -1000,34 +1057,15 @@ footer {
     padding: 10px 20px;
     font-size: 16px;
     text-transform: uppercase;
-    text-decoration: none;
-    display: inline-block;
-    overflow: hidden;
-    transition: transform 0.3s;
 }
 
 #pag-eventos .eventos div .button-hallo:hover {
     transform: scale(1.05);
+    color: #ff4500;
+    background-color: white;
+    border: 1px solid;
 }
 
-#pag-eventos .eventos div .button-hallo::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, rgba(255, 69, 0, 0.8), rgba(255, 215, 0, 0.8), rgba(255, 0, 0, 0.8));
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    border-radius: 50%;
-    z-index: 0;
-    animation: fire 0.6s infinite alternate;
-    opacity: 0;
-}
-
-#pag-eventos .eventos div .button-hallo:hover::before {
-    opacity: 1;
-}
 
 #pag-eventos .container-carrossel h2,
 #pag-eventos .galeria h2 {
@@ -1040,18 +1078,14 @@ footer {
     background-color: black;
 }
 
-@keyframes fire {
-    0% {
-        transform: translate(-50%, -50%) scale(0.8);
-        opacity: 0.5;
-    }
+/* --->     <--- */
 
-    100% {
-        transform: translate(-50%, -50%) scale(1.2);
-        opacity: 0;
-    }
-}
 
+
+
+
+
+/* --->  pag atividades   <--- */
 #pag-atividades h1 {
     color: white;
     text-align: center;
@@ -1066,7 +1100,6 @@ footer {
 
 #pag-atividades .atividades p {
     margin-bottom: 2rem;
-    line-height: 1.8;
     padding: 20px;
 }
 
@@ -1094,3 +1127,4 @@ footer {
 #pag-atividades .atividades .aulas-gratis h2 {
     text-align: center;
 }
+/* --->     <--- */
