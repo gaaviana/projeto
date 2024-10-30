@@ -12,6 +12,7 @@
 
     <title>Tossan F.C.</title>
 
+    <link rel="stylesheet" href="ligthbox/css/lightbox.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -92,8 +93,8 @@
                         </figure>
                     </div>
                     <div class="carrossel-buttons">
-                        <button class="prevBtn">Voltar</button>
-                        <button class="nextBtn">Avançar</button>
+                        <button class="prevBtn"><<<</button>
+                        <button class="nextBtn">>>></button>
                     </div>
                 </div>
                 
@@ -127,8 +128,8 @@
                 </div>
 
                 <div class="botao">
-                    <button class="prevBtn">Voltar</button>
-                    <button class="nextBtn">Avançar</button>
+                    <button class="prevBtn"><<<</button>
+                    <button class="nextBtn">>>></button>
                 </div>
             </article>
 
@@ -136,9 +137,10 @@
                 <h2>Eventos Passados</h2>
                 <div class="galeria-container">
 
-                    <a data-lightbox="foto" data-title="Campo" href="midia/imagem-aprimorada.png">
+                    <a data-lightbox="foto" data-title="Evento de Hallowen" href="midia/evento-hallo.png">
                         <figure class="foto">
-                            <img src="midia/imagem-aprimorada.png" alt="Foto 1">
+                            <img src="midia/evento-hallo.png" alt="Foto 1">
+                            <figcaption>Halloween</figcaption>
                         </figure>
                     </a>
 
@@ -159,8 +161,8 @@
                             <img src="midia/imagem-aprimorada.png" alt="Foto 4">
                         </figure>
                     </a>
-
                 </div>
+                <p>Veja mais em <a href="https://www.instagram.com/tossan_fc/#">@tossan_fc</a> no Instagram!!</p>
             </article>
         </div>
     </main>
@@ -194,6 +196,20 @@
             </div>
         </div>
     </footer>
+
+     <!-- Importação da biblioteca jQuery (sempre primeiro) -->
+     <script src="js/jquery-3.7.1.min.js"></script>
+
+     <!-- Importação do plugin Lightbox -->
+     <script src="ligthbox/js/lightbox.min.js"></script>
+ 
+     <script>
+         lightbox.option({
+             'resizeDuration': 200,
+             'wrapAround': true,
+             albumLabel: "Foto %1 de %2"
+         });
+     </script>
 
     <script src="js/carrossel.js"></script>
     <script src="js/menu.js"></script>
