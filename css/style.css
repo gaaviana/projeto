@@ -381,7 +381,7 @@ nav {
 
 .galeria .galeria-container .foto img {
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     transition: transform 0.3s ease;
 }
 
@@ -597,6 +597,8 @@ footer {
         width: 100%;
         scroll-snap-type: x mandatory;
     }
+
+
 }
 /* --->     <--- */
 
@@ -923,7 +925,7 @@ footer {
 #pag-camp1 main .estilo-tabela .jogos img,
 #pag-camp2 main .estilo-tabela .jogos img,
 #pag-camp3 main .estilo-tabela .jogos img {
-    width: 75px;
+    width: 50px;
 }
 
 #pag-camp1 main .estilo-tabela .juntar-tabelas,
@@ -948,6 +950,13 @@ footer {
     padding: 10px;
     border: 1px solid #ddd;
 }
+
+#pag-camp1 main .estilo-tabela td img,
+#pag-camp2 main .estilo-tabela td img,
+#pag-camp3 main .estilo-tabela td img {
+    width: 50px;
+}
+
 
 #pag-camp1 main .estilo-tabela .lista-jogos,
 #pag-camp2 main .estilo-tabela .lista-jogos {
@@ -1113,6 +1122,26 @@ footer {
     margin: 0;
 }
 
+#pag-atividades .img-ativivades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+#pag-atividades .info-atividades a img {
+    width: 40px;
+}
+
+#pag-atividades .esportes h3 {
+    padding-left: 2rem;
+}
+
+#pag-atividades .esportes img {
+   width: 100%;
+   max-width: 300px;
+}
+
 #pag-atividades .atividades .instagram-media {
     display: inline !important;
     width: 100%;
@@ -1123,7 +1152,7 @@ footer {
     text-align: center;
 }
 
-#pag-atividades .atividades .aulas-gratis h4,
+#pag-atividades .atividades .aulas-gratis h3,
 #pag-atividades .atividades .aulas-gratis h2 {
     text-align: center;
 }
