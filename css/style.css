@@ -525,32 +525,32 @@ footer {
         display: none;
     }
 
-    .menu .patrocinio-nav {
+    .patrocinio-nav {
         display: flex;
         justify-content: center;
         gap: 10%;
         margin: 2rem;
     }
 
-    .menu .patrocinio-nav img {
+    .patrocinio-nav img {
         width: 70px;
     }
 
-    .menu ul {
+    ul {
         margin: 0;
         padding: 0;
         list-style: none;
     }
 
-    .menu a {
+    a {
         font-size: 1.25rem;
         font-weight: bold;
         color: black;
         text-decoration: none;
     }
 
-    .menu .coluna-esquerda li,
-    .menu .coluna-direita li {
+    .coluna-esquerda li,
+    .coluna-direita li {
         padding-bottom: 10px;
         padding-top: 10px;
     }
@@ -559,7 +559,7 @@ footer {
         display: flex;
     }
 
-    header .links-menu .sub-menu {
+    .sub-menu {
         display: none;
         position: relative;
         background-color: white;
@@ -567,14 +567,13 @@ footer {
         top: 0;
     }
 
-    header .links-menu .sub-menu li a {
+    .sub-menu li a {
         font-size: 1.125rem;
         font-weight: 400;
     }
 
     .estilo-tabela {
         flex-direction: column;
-        
     }
 
     .tabela-combinada {
@@ -584,8 +583,6 @@ footer {
         width: 100%;
         scroll-snap-type: x mandatory;
     }
-
-
 }
 /* --->     <--- */
 
@@ -594,7 +591,7 @@ footer {
 
 
 /* --->  media tablet   <--- */
-@media (min-width: 801px) and (max-width:1200px) {
+@media (min-width: 801px) and (max-width: 1200px) {
     h1 {
         font-size: 2.5rem;
     }
@@ -639,15 +636,15 @@ footer {
         display: flex;
         flex-direction: row;
         gap: 50px;
-
-        a {
-            font-weight: 700;
-            text-decoration: none;
-            color: white;
-        }
     }
 
+    .links-menu a {
+        font-weight: 700;
+        text-decoration: none;
+        color: white;
+    }
 }
+
 /* --->     <--- */
 
 
@@ -708,7 +705,7 @@ footer {
         color: white;
     }
 
-    .calendario .jogos {
+    .calendario-jogos {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -716,6 +713,7 @@ footer {
         gap: 30px;
     }
 }
+
 /* --->   <--- */
 
 
