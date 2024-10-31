@@ -12,6 +12,7 @@
 
     <title>Tossan F.C.</title>
 
+    <link rel="stylesheet" href="ligthbox/css/lightbox.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -61,7 +62,13 @@
                 Duis in leo eget metus finibus maximus. Mauris sagittis a nisi eu pharetra. Aliquam libero elit, porta at elementum nec, consequat in ligula. Etiam lacinia in dui porta tincidunt. Pellentesque congue placerat leo et porttitor. Aenean rutrum vel ipsum ac varius. Suspendisse condimentum at turpis euismod cursus. Aenean non risus id sem porta sollicitudin nec sed nunc. Etiam tristique felis odio, efficitur lacinia nunc fringilla quis. Maecenas condimentum mollis turpis at ullamcorper. Quisque tristique felis non sodales finibus. Nulla facilisi. Mauris venenatis, nunc a viverra sodales, augue orci vulputate massa, sit amet aliquam dui massa non neque. Vivamus laoreet ligula odio, id semper velit condimentum ac. Quisque accumsan arcu sollicitudin massa tincidunt, em malesuada leo pellentesque.
                 
                 Praesent suscipit non mi ut mattis. Etiam quis quam eget nibh posuere facilisis. Nulla ultrices metus sit amet mollis congue. Phasellus vulputate dui non lacus dignissim dignissim. Quisque suscipit arcu at arcu tincidunt tincidunt. Nulla viverra eros ut egestas pretium. In volutpat, lorem non pulvinar tempor, dui massa euismod quam, quis consectetur justo ligula a nisi.</p>
-                <figure class="box"><img src="midia/antigo.png" alt=""></figure>
+
+                <a data-lightbox="foto" data-title="Terrão" href="midia/antigo.png">
+                    <figure class="foto">
+                        <img src="midia/antigo.png" alt="Campo do Tossan antes das reformas">
+                    </figure>
+                </a>
+
                 <h2 class="box">Mudanças</h2>
                 <p class="box">Praesent suscipit non mi ut mattis. Etiam quis quam eget nibh posuere facilisis. Nulla ultrices metus sit amet mollis congue. Phasellus vulputate dui non lacus dignissim dignissim. Quisque suscipit arcu at arcu tincidunt tincidunt. Nulla viverra eros ut egestas pretium. In volutpat, lorem non pulvinar tempor, dui massa euismod quam, quis consectetur justo ligula a nisi.
 
@@ -100,15 +107,21 @@
                     <img src="midia/instagram.png" alt="Instagram Tossan F.C.">
                 </a>
             </div>
-
-            <h4>Patrocinadores</h4>
-            <div class="patrocinio">
-                <img src="midia/tossan-logo.png" alt="Patrocinador 1">
-                <img src="midia/tossan-logo.png" alt="Patrocinador 2">
-                <img src="midia/tossan-logo.png" alt="Patrocinador 3">
-            </div>
-        </div>
     </footer>
+
+      <!-- Importação da biblioteca jQuery (sempre primeiro) -->
+      <script src="js/jquery-3.7.1.min.js"></script>
+
+      <!-- Importação do plugin Lightbox -->
+      <script src="ligthbox/js/lightbox.min.js"></script>
+  
+      <script>
+          lightbox.option({
+              'resizeDuration': 200,
+              'wrapAround': true,
+              albumLabel: "Foto %1 de %2"
+          });
+      </script>
 
     <script src="js/menu.js"></script>
 </body>

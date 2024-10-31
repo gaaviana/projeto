@@ -12,6 +12,7 @@
 
     <title>Tossan F.C.</title>
 
+    <link rel="stylesheet" href="ligthbox/css/lightbox.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -70,9 +71,24 @@
                 <p class="box">Nosso time vai além do futebol; somos um verdadeiro agente de transformação na comunidade! Promovemos campeonatos emocionantes e eventos que envolvem a juventude em atividades esportivas, garantindo saúde e diversão para todos. E não paramos por aí: nossas festas e celebrações em datas especiais são momentos únicos de união e alegria, onde cada sorriso conta. Acreditamos que cada passe, cada gol e cada evento são oportunidades de criar laços fortes e impactar vidas de maneira positiva!</p>
                 
                 <figure class="box">
-                    <img src="midia/comunidade1.png" alt="">
-                    <img src="midia/comunidade2.png" alt="">
-                    <img src="midia/comunidade3.png" alt="">
+                    <a data-lightbox="foto" data-title="Campeonatos" href="midia/comunidade1.png">
+                        <figure class="foto">
+                            <img src="midia/comunidade1.png" alt="Torcida na final do campeonato">
+                           
+                        </figure>
+                    </a>
+                    <a data-lightbox="foto" data-title="Festas" href="midia/comunidade2.png">
+                        <figure class="foto">
+                            <img src="midia/comunidade2.png" alt="Festa Junina ">
+                         
+                        </figure>
+                    </a>
+                    <a data-lightbox="foto" data-title="Ações Sociais" href="midia/comunidade3.png">
+                        <figure class="foto">
+                            <img height="400px" src="midia/comunidade3.png" alt="Mascotes do Santos F.C. visitando o campo">
+
+                        </figure>
+                    </a>
                 </figure>
             </article>
             
@@ -130,16 +146,21 @@
                     <img src="midia/instagram.png" alt="Instagram Tossan F.C.">
                 </a>
             </div>
-
-            <h4>Patrocinadores</h4>
-            <div class="patrocinio">
-                <img src="midia/tossan-logo.png" alt="Patrocinador 1">
-                <img src="midia/tossan-logo.png" alt="Patrocinador 2">
-                <img src="midia/tossan-logo.png" alt="Patrocinador 3">
-            </div>
-        </div>
     </footer>
 
+      <!-- Importação da biblioteca jQuery (sempre primeiro) -->
+      <script src="js/jquery-3.7.1.min.js"></script>
+
+      <!-- Importação do plugin Lightbox -->
+      <script src="ligthbox/js/lightbox.min.js"></script>
+  
+      <script>
+          lightbox.option({
+              'resizeDuration': 200,
+              'wrapAround': true,
+              albumLabel: "Foto %1 de %2"
+          });
+      </script>
     <script src="js/comunidade.js"></script>
     <script src="js/menu.js"></script>
 </body>
